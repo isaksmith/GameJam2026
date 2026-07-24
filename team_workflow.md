@@ -1,7 +1,7 @@
 # Team Workflow — [GAME NAME] Game Jam
 
 ## Ground rules (read before you touch anything)
-1. **Everyone uses the exact same Godot version:** [FILL IN, e.g. 4.x.x]
+1. **Everyone uses the exact same Godot version (4.7.1)
 2. **GDScript only** (no C#).
 3. **Never edit the same .tscn scene as someone else at the same time.**
    Scenes don't merge — they corrupt. Call it out in voice chat first.
