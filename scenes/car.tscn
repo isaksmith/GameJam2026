@@ -15,7 +15,6 @@ size = Vector2(180, 64)
 script = ExtResource("1_3mrxu")
 
 [node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392 groups=["cart"]]
-collision_layer = 2
 mass = 5.0
 script = ExtResource("1_uoj53")
 

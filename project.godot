@@ -24,6 +24,10 @@ Game="*uid://ckighrn150ypv"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+cart=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

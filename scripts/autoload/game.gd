@@ -102,6 +102,7 @@ func _wire_goal(level: Node) -> void:
 ## Called whenever ANY physics body enters the Goal area.
 func _on_goal_entered(body: Node) -> void:
 	# Only the cart counts. We check for the "cart" group so obstacles/debris don't win.
+	print(body)
 	if body.is_in_group("cart"):
 		level_won()
 
