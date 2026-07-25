@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://pnf8820denx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l2qa7"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qv1gd"]
+radius = 150.0
+
+[node name="Level2" type="Node2D" unique_id=1698461526]
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=954511662]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain" unique_id=21935796]
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+polygon = PackedVector2Array(4.103616, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2626.3145, 306.20435, 5051.552, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="Boulder" type="StaticBody2D" parent="." unique_id=765745447]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boulder" unique_id=1546646554]
+position = Vector2(1679, 380)
+shape = SubResource("CircleShape2D_l2qa7")
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1192992925]
+position = Vector2(75, 191)
+
+[node name="Goal" type="Area2D" parent="." unique_id=1770429971]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1763548330]
+position = Vector2(2224, 337)
+shape = SubResource("CircleShape2D_qv1gd")
