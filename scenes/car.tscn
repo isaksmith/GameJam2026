@@ -8,6 +8,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(62, 20)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jtldb"]
+rough = true
+
 [node name="Car" type="Node2D" unique_id=1932826611]
 
 [node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392]
@@ -27,6 +30,7 @@ motor_target_velocity = 1.2217305
 
 [node name="frontWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Front" unique_id=1594768343]
 collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_jtldb")
 script = ExtResource("2_jtldb")
 
 [node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1851375978]
@@ -34,13 +38,6 @@ scale = Vector2(0.049, 0.049)
 texture = ExtResource("2_k61xc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1775956086]
-
-[node name="GroundDetector" type="Area2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=970032742]
-visible = false
-collision_layer = 0
-monitorable = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Front/frontWheel/GroundDetector" unique_id=1152302057]
 
 [node name="PinJoint2D_Rear" type="PinJoint2D" parent="chassis" unique_id=716700229]
 position = Vector2(-25, 10)
@@ -59,13 +56,6 @@ scale = Vector2(0.04872879, 0.048728798)
 texture = ExtResource("2_k61xc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=1062075541]
-
-[node name="GroundDetector" type="Area2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=88014256]
-visible = false
-collision_layer = 0
-monitorable = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Rear/rearWheel/GroundDetector" unique_id=1766231064]
 
 [node name="chassisSprite" type="Sprite2D" parent="chassis" unique_id=2122506071]
 z_index = -1

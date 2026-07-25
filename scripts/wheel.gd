@@ -16,18 +16,18 @@ func generate_test_circle(vertex_count: int, radius: float) -> PackedVector2Arra
 
 func setup_drawn_wheel(drawn_points: PackedVector2Array) -> void:
 	#$CollisionPolygon2D.polygon = drawn_points
-	# Finds the exact middle of whatever shape the player drew
+	# Finds the exact middle of whatever shape the player drew, averages all points
 	var center = Vector2.ZERO
 	for point in drawn_points:
 		center += point
 	center /= drawn_points.size()
 	
-	# Shift all points so the drawing's center sits perfectly on the Rigidbody's (0,0)
+	# Shift all points so the drawing's center sits perfectly on center of mass
 	var centered_points = PackedVector2Array()
 	for point in drawn_points:
 		centered_points.append(point - center)
 		
-	# 2. Update the physical wheel shape
+	# Update the physical wheel shape
 	$CollisionPolygon2D.polygon = centered_points
 	
 	
