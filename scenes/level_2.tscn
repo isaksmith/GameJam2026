@@ -1,8 +1,5 @@
 [gd_scene format=3 uid="uid://pnf8820denx"]
 
-[ext_resource type="PackedScene" uid="uid://dthqiulpf51lb" path="res://scenes/car.tscn" id="1_jm1iu"]
-[ext_resource type="Script" uid="uid://301yxri37xbe" path="res://scripts/camera_2d.gd" id="2_pbc48"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2qa7"]
 radius = 100.0
 
@@ -32,9 +29,3 @@ position = Vector2(75, 191)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1763548330]
 position = Vector2(2224, 337)
 shape = SubResource("CircleShape2D_qv1gd")
-
-[node name="Car" parent="." unique_id=1932826611 instance=ExtResource("1_jm1iu")]
-position = Vector2(197, 4)
-
-[node name="Camera2D" type="Camera2D" parent="Car" unique_id=1903906716]
-script = ExtResource("2_pbc48")

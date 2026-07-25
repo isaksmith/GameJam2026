@@ -14,7 +14,7 @@ const LEVELS: Array[String] = [
 
 # Which cart to spawn into each level. A placeholder ball for now;
 # swap this for the real cart's path once it exists.
-const CART_SCENE: String = "res://scenes/_dev/placeholder_cart.tscn"
+const CART_SCENE: String = "res://scenes/car.tscn"
 
 # Where we currently are in the LEVELS list.
 var current_index: int = 0

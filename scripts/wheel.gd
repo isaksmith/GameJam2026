@@ -56,7 +56,7 @@ func drive(direction: float, base_power: float) -> void:
 
 func _ready() -> void:
 	# Automatically generate polygon with X vertices and Y radius
-	var test_points = generate_test_circle(4,200)
+	var test_points = generate_test_circle(4,50)
 	# Pass it into the wheel's setup function
 	setup_drawn_wheel(test_points)
 	
