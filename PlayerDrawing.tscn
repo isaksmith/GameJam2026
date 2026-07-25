@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bjw2ji2e6vacg"]
+
+[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://color_rect.gd" id="1_25juh"]
+[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="2_0bw7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bw7c"]
+size = Vector2(798, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufqy1"]
+size = Vector2(196.5, 71)
+
+[node name="Node2D" type="Node2D" unique_id=1772796915]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=343081861]
+offset_right = 206.0
+offset_bottom = 177.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=828627669]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=2041710690]
+unique_name_in_owner = true
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 194.0
+offset_bottom = 192.0
+script = ExtResource("1_25juh")
+
+[node name="FrontWheel" type="RigidBody2D" parent="." unique_id=1823785593]
+unique_name_in_owner = true
+position = Vector2(260, 119)
+freeze = true
+script = ExtResource("2_0bw7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="FrontWheel" unique_id=81602725]
+unique_name_in_owner = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FrontWheel" unique_id=1503785906]
+unique_name_in_owner = true
+polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="BackWheel" type="RigidBody2D" parent="." unique_id=79121045]
+unique_name_in_owner = true
+position = Vector2(260, 119)
+freeze = true
+
+[node name="BackSprite2D" type="Sprite2D" parent="BackWheel" unique_id=1071009877]
+unique_name_in_owner = true
+
+[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="BackWheel" unique_id=1118838776]
+unique_name_in_owner = true
+polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="GroundTesting" type="StaticBody2D" parent="." unique_id=1637020365]
+position = Vector2(501, 278)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundTesting" unique_id=133449724]
+position = Vector2(-84, 287)
+shape = SubResource("RectangleShape2D_0bw7c")
+one_way_collision = true
+
+[node name="CarRigidbody" type="RigidBody2D" parent="." unique_id=222145915]
+unique_name_in_owner = true
+position = Vector2(469, 223)
+freeze = true
+
+[node name="BackWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=72170097]
+unique_name_in_owner = true
+position = Vector2(-82, 25)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="FrontWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=1109445076]
+unique_name_in_owner = true
+position = Vector2(88, 26)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarRigidbody" unique_id=894566389]
+shape = SubResource("RectangleShape2D_ufqy1")
+
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/ColorRect" to="SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SubViewportContainer/SubViewport/ColorRect" to="SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_exited"]
