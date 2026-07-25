@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjw2ji2e6vacg"]
+
+[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://color_rect.gd" id="1_25juh"]
+
+[node name="Node2D" type="Node2D" unique_id=1772796915]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=343081861]
+offset_right = 206.0
+offset_bottom = 177.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=828627669]
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=2041710690]
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 194.0
+offset_bottom = 165.0
+script = ExtResource("1_25juh")
