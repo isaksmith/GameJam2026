@@ -1,24 +1,9 @@
 [gd_scene format=3 uid="uid://36gwleaafdw8"]
 
 [ext_resource type="PackedScene" uid="uid://dthqiulpf51lb" path="res://scenes/car.tscn" id="1_836ff"]
-[ext_resource type="Texture2D" uid="uid://dbbe0ukmhj7j0" path="res://assets/_placeholder/Allpieces.png" id="1_e3ttu"]
+[ext_resource type="Texture2D" uid="uid://8eylwqs54253" path="res://assets/sprites/terrain/grass_floor.png" id="1_e3ttu"]
 [ext_resource type="Script" uid="uid://301yxri37xbe" path="res://scripts/camera_2d.gd" id="2_uci07"]
 [ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ytui5"]
-atlas = ExtResource("1_e3ttu")
-region = Rect2(0, 196, 133, 80)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gueqe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ytui5")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
 bounce = 1.0
@@ -30,17 +15,10 @@ bounce = 1.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff" unique_id=184530132]
 polygon = PackedVector2Array(16, -1, 395, -3, 458, 60, 470, 199, 437, 757, 1, 761, -161, 3)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cliff" unique_id=1329052665]
-texture_filter = 1
-position = Vector2(-90.674995, 11.999997)
-scale = Vector2(1.05, 1.05)
-sprite_frames = SubResource("SpriteFrames_gueqe")
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="cliff" unique_id=700810037]
-texture_filter = 1
-position = Vector2(40.999996, 12.000001)
-scale = Vector2(1.1024998, 1.1024998)
-sprite_frames = SubResource("SpriteFrames_gueqe")
+[node name="Sprite2D" type="Sprite2D" parent="cliff" unique_id=1198424344]
+position = Vector2(134, 70)
+scale = Vector2(0.9054054, 0.9054054)
+texture = ExtResource("1_e3ttu")
 
 [node name="Car" parent="." unique_id=1932826611 instance=ExtResource("1_836ff")]
 position = Vector2(-20, -279)
