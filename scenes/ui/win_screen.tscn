@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dsp628h440nui"]
+
+[ext_resource type="Script" uid="uid://b7bf18cywftgr" path="res://scripts/ui/win_screen.gd" id="1_1cgod"]
+
+[node name="WinScreen" type="Control" unique_id=1513104981]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1cgod")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=972353447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5294118)
+
+[node name="Box" type="VBoxContainer" parent="." unique_id=495366067]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -101.75
+offset_right = 159.0
+offset_bottom = 101.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Box" unique_id=1988649562]
+layout_mode = 2
+text = "Banana Reached!
+"
+horizontal_alignment = 1
+
+[node name="NextButton" type="Button" parent="Box" unique_id=1226059240]
+layout_mode = 2
+text = "Next"
+
+[node name="RetryButton" type="Button" parent="Box" unique_id=1555834833]
+layout_mode = 2
+text = "Retry"

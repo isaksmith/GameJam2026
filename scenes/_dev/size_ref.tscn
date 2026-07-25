@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bnr6musn2hji3"]
+
+[node name="size_ref_delete" type="ColorRect" unique_id=1560585986]
+custom_minimum_size = Vector2(128, 64)
+offset_left = 371.0
+offset_top = 39.0
+offset_right = 499.0
+offset_bottom = 103.0
