@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dthqiulpf51lb"]
 
+[ext_resource type="Script" uid="uid://dqiyoy2tmw5y4" path="res://scripts/car.gd" id="1_3mrxu"]
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
 [ext_resource type="Texture2D" uid="uid://3bigj1vedref" path="res://assets/sprites/Screenshot 2026-07-24 210101.png" id="2_k61xc"]
@@ -9,9 +10,9 @@
 size = Vector2(180, 64)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jtldb"]
-bounce = 1.0
 
 [node name="Car" type="Node2D" unique_id=1932826611]
+script = ExtResource("1_3mrxu")
 
 [node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392]
 collision_layer = 2

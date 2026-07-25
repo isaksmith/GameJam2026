@@ -5,6 +5,8 @@ extends RigidBody2D
 @export var rotate_power: float = 20000.0
 
 
+
+
 func _physics_process(delta: float) -> void:
 	#  Get horizontal input (-1 for left, 1 for right, 0 for none)
 
@@ -12,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	var move_input := Input.get_axis("ui_left", "ui_right")
 	if move_input != 0:
 		#Apply torque to the wheels to make them roll
-		front_wheel.apply_torque(move_input * drive_power)
-		rear_wheel.apply_torque(move_input * drive_power)
+		front_wheel.drive(move_input, drive_power)
+		rear_wheel.drive(move_input, drive_power)
 		#apply torque to chassis so it rotates when mid air
 		apply_torque(rotate_power*move_input)
