@@ -19,9 +19,25 @@ const CART_SCENE: String = "res://scenes/_dev/placeholder_cart.tscn"
 # Where we currently are in the LEVELS list.
 var current_index: int = 0
 
-# A link to the live LevelHost scene (the gameplay container).
+const MAIN_MENU: String = "res://scenes/ui/main_menu.tscn"
+const LEVEL_HOST: String = "res://scenes/ui/level_host.tscn"
+
+# A link to the live LevelHos.t scene (the gameplay container).
 # LevelHost fills this in on itself when it loads (see level_host.gd).
 var host: Node = null
+
+
+# --- Coarse navigation: switch between menu and gameplay ---
+
+func start_game() -> void:
+	current_index = 0
+	get_tree().change_scene_to_file(LEVEL_HOST)  # LevelHost then loads level 0
+
+func go_to_menu() -> void:
+	get_tree().change_scene_to_file(MAIN_MENU)
+
+func quit_game() -> void:
+	get_tree().quit()
 
 
 # ---------------------------------------------------------------------------
