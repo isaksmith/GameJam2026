@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="monke"
+run/main_scene="uid://ddcjiqlrguuss"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Game="*uid://ckighrn150ypv"
 
 [display]
 
