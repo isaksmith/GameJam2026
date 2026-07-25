@@ -9,7 +9,6 @@
 size = Vector2(62, 20)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jtldb"]
-rough = true
 
 [node name="Car" type="Node2D" unique_id=1932826611]
 
