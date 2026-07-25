@@ -22,7 +22,7 @@ position = Vector2(1679, 380)
 shape = SubResource("CircleShape2D_l2qa7")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1192992925]
-position = Vector2(75, 191)
+position = Vector2(237, 116)
 
 [node name="Goal" type="Area2D" parent="." unique_id=1770429971]
 
