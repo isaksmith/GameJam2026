@@ -1,6 +1,9 @@
 extends RigidBody2D
 #I THINK THIS ISNT ALL NEEDED BUT WILL FIX IF IT IS
 
+@export var torque_per_pixel: float = 2000.0 # Extra torque per pixel of radius
+
+
 func generate_test_circle(vertex_count: int, radius: float) -> PackedVector2Array:
 	var points = PackedVector2Array()
 	
@@ -31,12 +34,24 @@ func setup_drawn_wheel(drawn_points: PackedVector2Array) -> void:
 	$CollisionPolygon2D.polygon = centered_points
 	
 	
+func calculateBonusTorque() -> float:
+	var points = $CollisionPolygon2D.polygon
 
+	# Find the radius (max distance from center to any point)
+	var max_radius: float = 0.0
+	for p in points:
+		max_radius = maxf(max_radius, p.length())
+
+	# Simple Linear Scaling: BaseTorque + (MaxRadius * BonusTorquePerPix) - larger wheels get more torque and and spin appropriately
+	var torqueBonus = (max_radius * torque_per_pixel)
+	return torqueBonus
 
 
 func _ready() -> void:
-	# Automatically generate a 32-sided circular polygon with a 40px radius
-	var test_points = generate_test_circle(32, 10)
+	# Automatically generate polygon with X vertices and Y radius
+	var test_points = generate_test_circle(32,250)
 		
 	# Pass it into the wheel's setup function
 	setup_drawn_wheel(test_points)
+	$"../..".drive_power+=calculateBonusTorque()
+	

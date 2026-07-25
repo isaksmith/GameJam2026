@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="monke"
-run/main_scene="uid://dxicaekfnhreo"
+run/main_scene="uid://pnf8820denx"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
