@@ -10,3 +10,6 @@ func apply_custom_wheels(drawn_points: PackedVector2Array) -> void:
 		
 	if is_instance_valid(rear_wheel):
 		rear_wheel.setup_drawn_wheel(drawn_points)
+
+func _process(delta: float) -> void:
+	pass

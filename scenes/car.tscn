@@ -14,7 +14,7 @@ size = Vector2(180, 64)
 [node name="Car" type="Node2D" unique_id=1932826611]
 script = ExtResource("1_3mrxu")
 
-[node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392]
+[node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392 groups=["cart"]]
 collision_layer = 2
 mass = 5.0
 script = ExtResource("1_uoj53")
@@ -63,3 +63,5 @@ z_index = -1
 position = Vector2(9, -29)
 scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")
+
+[node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049]
