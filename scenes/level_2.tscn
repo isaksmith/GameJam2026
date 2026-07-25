@@ -37,5 +37,4 @@ shape = SubResource("CircleShape2D_qv1gd")
 position = Vector2(197, 4)
 
 [node name="Camera2D" type="Camera2D" parent="Car" unique_id=1903906716]
-zoom = Vector2(0.5, 0.5)
 script = ExtResource("2_pbc48")

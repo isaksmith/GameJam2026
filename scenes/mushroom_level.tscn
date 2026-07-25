@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://36gwleaafdw8"]
+
+[ext_resource type="PackedScene" uid="uid://dthqiulpf51lb" path="res://scenes/car.tscn" id="1_836ff"]
+[ext_resource type="Texture2D" uid="uid://dbbe0ukmhj7j0" path="res://assets/_placeholder/Allpieces.png" id="1_e3ttu"]
+[ext_resource type="Script" uid="uid://301yxri37xbe" path="res://scripts/camera_2d.gd" id="2_uci07"]
+[ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytui5"]
+atlas = ExtResource("1_e3ttu")
+region = Rect2(0, 196, 133, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gueqe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytui5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
+bounce = 1.0
+
+[node name="mushroom_level" type="Node2D" unique_id=346771258]
+
+[node name="cliff" type="StaticBody2D" parent="." unique_id=1800217517]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff" unique_id=184530132]
+polygon = PackedVector2Array(16, -1, 395, -3, 458, 60, 470, 199, 437, 757, 1, 761, -161, 3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cliff" unique_id=1329052665]
+texture_filter = 1
+position = Vector2(-90.674995, 11.999997)
+scale = Vector2(1.05, 1.05)
+sprite_frames = SubResource("SpriteFrames_gueqe")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="cliff" unique_id=700810037]
+texture_filter = 1
+position = Vector2(40.999996, 12.000001)
+scale = Vector2(1.1024998, 1.1024998)
+sprite_frames = SubResource("SpriteFrames_gueqe")
+
+[node name="Car" parent="." unique_id=1932826611 instance=ExtResource("1_836ff")]
+position = Vector2(-20, -279)
+
+[node name="Camera2D" type="Camera2D" parent="Car" unique_id=126298411]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_uci07")
+
+[node name="mushroomHead" type="StaticBody2D" parent="." unique_id=1757760001]
+position = Vector2(839, 549)
+physics_material_override = SubResource("PhysicsMaterial_jfkbx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead" unique_id=891759045]
+z_index = 1
+polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
+
+[node name="Sprite2D" type="Sprite2D" parent="mushroomHead" unique_id=1722695440]
+texture_filter = 1
+position = Vector2(137.99997, 63.999977)
+scale = Vector2(11.445312, 11.445312)
+texture = ExtResource("3_uci07")
+
+[node name="cliff2" type="StaticBody2D" parent="." unique_id=1107189851]
+position = Vector2(1895, 88)
+scale = Vector2(-1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff2" unique_id=1104480611]
+polygon = PackedVector2Array(16, -1, 395, -3, 458, 60, 470, 199, 437, 757, 1, 761, -6, -4)
+
+[node name="cliff3" type="StaticBody2D" parent="." unique_id=126042969]
+position = Vector2(4008, 581)
+scale = Vector2(-1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff3" unique_id=1319283852]
+polygon = PackedVector2Array(16, -1, 395, -3, 458, 60, 470, 199, 437, 757, 1, 761, -6, -4)
+
+[node name="mushroomHead2" type="StaticBody2D" parent="." unique_id=1901052130]
+position = Vector2(1826, 533.00006)
+rotation = 0.54803336
+physics_material_override = SubResource("PhysicsMaterial_jfkbx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead2" unique_id=1530194540]
+z_index = 1
+polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
+
+[node name="Sprite2D" type="Sprite2D" parent="mushroomHead2" unique_id=773344276]
+texture_filter = 1
+position = Vector2(137.99997, 63.999977)
+scale = Vector2(11.445312, 11.445312)
+texture = ExtResource("3_uci07")
+
+[node name="mushroomHead3" type="StaticBody2D" parent="." unique_id=34884046]
+position = Vector2(2276, 748)
+physics_material_override = SubResource("PhysicsMaterial_jfkbx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead3" unique_id=356091712]
+z_index = 1
+polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
+
+[node name="Sprite2D" type="Sprite2D" parent="mushroomHead3" unique_id=1904161356]
+texture_filter = 1
+position = Vector2(137.99997, 63.999977)
+scale = Vector2(11.445312, 11.445312)
+texture = ExtResource("3_uci07")
+
+[node name="mushroomHead4" type="StaticBody2D" parent="." unique_id=590486760]
+position = Vector2(2974, 773)
+physics_material_override = SubResource("PhysicsMaterial_jfkbx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead4" unique_id=2017863661]
+z_index = 1
+polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
+
+[node name="Sprite2D" type="Sprite2D" parent="mushroomHead4" unique_id=169834062]
+texture_filter = 1
+position = Vector2(137.99997, 63.999977)
+scale = Vector2(11.445312, 11.445312)
+texture = ExtResource("3_uci07")

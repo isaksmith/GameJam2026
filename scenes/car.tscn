@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
 [ext_resource type="Texture2D" uid="uid://3bigj1vedref" path="res://assets/sprites/Screenshot 2026-07-24 210101.png" id="2_k61xc"]
-[ext_resource type="Texture2D" uid="uid://bhtcxy4wrihxe" path="res://icon.svg" id="3_k61xc"]
+[ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(180, 64)
@@ -60,6 +60,6 @@ texture = ExtResource("2_k61xc")
 
 [node name="chassisSprite" type="Sprite2D" parent="chassis" unique_id=2122506071]
 z_index = -1
-position = Vector2(0.5000057, -9.536743e-07)
-scale = Vector2(1.4140625, 0.484375)
-texture = ExtResource("3_k61xc")
+position = Vector2(9, -29)
+scale = Vector2(0.28729165, 0.28729165)
+texture = ExtResource("5_3mrxu")

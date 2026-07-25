@@ -2,7 +2,7 @@ extends RigidBody2D
 @onready var front_wheel: RigidBody2D = $PinJoint2D_Front/frontWheel
 @onready var rear_wheel: RigidBody2D = $PinJoint2D_Rear/rearWheel
 @export var drive_power: float = 20000.0#increase for more speed/torque to climb hills
-@export var rotate_power: float = 20000.0
+@export var rotate_power: float = 30000.0
 
 
 
