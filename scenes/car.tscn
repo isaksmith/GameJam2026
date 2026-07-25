@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dthqiulpf51lb"]
+
+[ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
+[ext_resource type="Texture2D" uid="uid://3bigj1vedref" path="res://assets/sprites/Screenshot 2026-07-24 210101.png" id="2_k61xc"]
+[ext_resource type="Texture2D" uid="uid://bhtcxy4wrihxe" path="res://icon.svg" id="3_k61xc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
+size = Vector2(62, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k61xc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_06lh1"]
+
+[node name="Car" type="Node2D" unique_id=1932826611]
+
+[node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392]
+mass = 5.0
+script = ExtResource("1_uoj53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chassis" unique_id=183773225]
+shape = SubResource("RectangleShape2D_gueqe")
+
+[node name="PinJoint2D_Front" type="PinJoint2D" parent="chassis" unique_id=1867076887]
+position = Vector2(25, 10)
+node_a = NodePath("..")
+node_b = NodePath("frontWheel")
+motor_enabled = true
+motor_target_velocity = 1.2217305
+
+[node name="frontWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Front" unique_id=1594768343]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1358987876]
+shape = SubResource("CircleShape2D_k61xc")
+
+[node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1851375978]
+scale = Vector2(0.049, 0.049)
+texture = ExtResource("2_k61xc")
+
+[node name="PinJoint2D_Rear" type="PinJoint2D" parent="chassis" unique_id=716700229]
+position = Vector2(-25, 10)
+node_a = NodePath("..")
+node_b = NodePath("rearWheel")
+motor_enabled = true
+motor_target_velocity = 1.2217305
+
+[node name="rearWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Rear" unique_id=529902088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=795292952]
+shape = SubResource("CircleShape2D_06lh1")
+
+[node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=192300974]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.04872879, 0.048728798)
+texture = ExtResource("2_k61xc")
+
+[node name="chassisSprite" type="Sprite2D" parent="chassis" unique_id=2122506071]
+z_index = -1
+position = Vector2(4.5000076, 0)
+scale = Vector2(0.5703126, 0.15625003)
+texture = ExtResource("3_k61xc")
