@@ -91,11 +91,12 @@ func _on_goal_entered(body: Node) -> void:
 
 
 # ---------------------------------------------------------------------------
-# Outcomes  (these just print for now — we'll connect them to UI screens next)
+# Outcomes  (connecting them to UI screens as we go)
 # ---------------------------------------------------------------------------
 
 func level_won() -> void:
 	print("LEVEL WON!  ")
+	host.get_node("UILayer/WinScreen").show_win()
 
 func game_complete() -> void:
 	print("GAME OVER! ")
