@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddcjiqlrguuss"]
+
+[ext_resource type="Script" uid="uid://b7hf2wku5a6o" path="res://scripts/ui/level_host.gd" id="1_11g33"]
+
+[node name="LevelHost" type="Node2D" unique_id=164218133]
+script = ExtResource("1_11g33")
+
+[node name="CurrentLevel" type="Node2D" parent="." unique_id=413905711]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1075788862]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="RectangleShape2D" id="ramp"]
+size = Vector2(2000, 40)
+
+[sub_resource type="CircleShape2D" id="goal"]
+radius = 200.0
+
+[node name="PlaceholderLevel" type="Node2D"]
+
+[node name="Terrain" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(1000, 400)
+rotation = 0.2
+shape = SubResource("ramp")
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(60, 120)
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(1800, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("goal")
