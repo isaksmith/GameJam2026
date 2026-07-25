@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7hf2wku5a6o" path="res://scripts/ui/level_host.gd" id="1_11g33"]
 [ext_resource type="PackedScene" uid="uid://dsp628h440nui" path="res://scenes/ui/win_screen.tscn" id="2_piagw"]
+[ext_resource type="PackedScene" uid="uid://b3gu4iso7mpjs" path="res://scenes/ui/hud.tscn" id="2_r238m"]
 
 [node name="LevelHost" type="Node2D" unique_id=164218133]
 script = ExtResource("1_11g33")
@@ -9,5 +10,7 @@ script = ExtResource("1_11g33")
 [node name="CurrentLevel" type="Node2D" parent="." unique_id=413905711]
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1075788862]
+
+[node name="HUD" parent="UILayer" unique_id=1139336182 instance=ExtResource("2_r238m")]
 
 [node name="WinScreen" parent="UILayer" unique_id=1513104981 instance=ExtResource("2_piagw")]

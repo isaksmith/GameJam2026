@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b3gu4iso7mpjs"]
+
+[ext_resource type="Script" uid="uid://7saulhysyh12" path="res://scripts/ui/hud.gd" id="1_0mwgc"]
+
+[node name="HUD" type="Control" unique_id=1139336182]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0mwgc")
+
+[node name="RetryButton" type="Button" parent="." unique_id=936562979]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -77.0
+offset_top = 14.0
+offset_right = -15.0
+offset_bottom = 72.0
+grow_horizontal = 0
+text = "⟳"
