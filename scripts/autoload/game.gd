@@ -65,6 +65,7 @@ func load_level(index: int) -> void:
 	# Put the cart in the level and hook up the win trigger.
 	_spawn_cart(level)
 	_wire_goal(level)
+	_wire_kill_zone(level)
 
 
 ## The RETRY. Reloading the current level clears the crashed cart and starts fresh.
@@ -108,6 +109,17 @@ func _on_goal_entered(body: Node) -> void:
 		body.setVictorySprite()
 		level_won()
 
+
+func _wire_kill_zone(level: Node) -> void:
+	var killZone: Area2D = level.get_node("KillZone")
+	if(is_instance_valid(killZone)):
+		killZone.body_entered.connect(_on_kill_zone_entered)
+	
+func _on_kill_zone_entered(body: Node) -> void:
+	print(body)
+	if body.is_in_group("cart"):
+		#TODO - ADD EXPLOSION SPRITE AND TIMER BEFORE RESTART
+		restart_level()
 
 # ---------------------------------------------------------------------------
 # Outcomes  (connecting them to UI screens as we go)

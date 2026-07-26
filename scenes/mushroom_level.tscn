@@ -16,6 +16,9 @@ size = Vector2(387.00003, 948.50024)
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfkbx"]
 radius = 108.11568
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c05aw"]
+distance = 12.0
+
 [node name="mushroom_level" type="Node2D" unique_id=346771258]
 
 [node name="cliff" type="StaticBody2D" parent="." unique_id=1800217517]
@@ -219,7 +222,7 @@ texture = ExtResource("5_ytui5")
 position = Vector2(135, -218)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=252272277]
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.75, 0.75)
 limit_left = -257
 limit_top = -696
 limit_right = 3939
@@ -238,3 +241,9 @@ z_index = -6
 position = Vector2(1845.5554, 272.125)
 scale = Vector2(10.945022, 9.195602)
 texture = ExtResource("6_lv3lf")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1657661776]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=188773079]
+position = Vector2(2135, 1164)
+shape = SubResource("WorldBoundaryShape2D_c05aw")
