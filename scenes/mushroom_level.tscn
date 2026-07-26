@@ -19,6 +19,9 @@ radius = 108.11568
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c05aw"]
 distance = 12.0
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jfkbx"]
+distance = -2.0
+
 [node name="mushroom_level" type="Node2D" unique_id=346771258]
 
 [node name="cliff" type="StaticBody2D" parent="." unique_id=1800217517]
@@ -103,7 +106,7 @@ texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead2" unique_id=2110388235]
 z_index = -1
-position = Vector2(316.2268, 407.69995)
+position = Vector2(420.3208, 581.1123)
 rotation = -0.54803336
 shape = SubResource("RectangleShape2D_jfkbx")
 
@@ -135,7 +138,7 @@ texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead3" unique_id=1307809415]
 z_index = -1
-position = Vector2(152.99988, 453)
+position = Vector2(152.99988, 645)
 shape = SubResource("RectangleShape2D_jfkbx")
 
 [node name="mushroomHead4" type="StaticBody2D" parent="." unique_id=590486760]
@@ -167,7 +170,7 @@ texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead4" unique_id=711064056]
 z_index = -2
-position = Vector2(188.99988, 457)
+position = Vector2(186.99988, 646)
 shape = SubResource("RectangleShape2D_jfkbx")
 
 [node name="cliff2" type="StaticBody2D" parent="." unique_id=320551258]
@@ -247,3 +250,17 @@ texture = ExtResource("6_lv3lf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=188773079]
 position = Vector2(2135, 1164)
 shape = SubResource("WorldBoundaryShape2D_c05aw")
+
+[node name="rightBorder" type="StaticBody2D" parent="." unique_id=114335781]
+position = Vector2(4525, 236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightBorder" unique_id=1601191286]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_jfkbx")
+
+[node name="leftBorder" type="StaticBody2D" parent="." unique_id=515474512]
+position = Vector2(-772, 328)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftBorder" unique_id=2133017347]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_jfkbx")

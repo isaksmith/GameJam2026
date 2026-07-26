@@ -10,6 +10,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fcfvj"]
 radius = 65.0
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
+distance = 12.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
+distance = -2.0
+
 [node name="Level1" type="Node2D" unique_id=1536128995]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=860916471]
@@ -67,7 +73,28 @@ texture = ExtResource("3_4nkto")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=986230265]
 limit_left = 0
-limit_top = 0
+limit_top = 3
 limit_right = 2457
 limit_bottom = 638
 script = ExtResource("6_fcfvj")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1144117522]
+position = Vector2(68, 646)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1938256901]
+position = Vector2(2135, 1164)
+shape = SubResource("WorldBoundaryShape2D_fcfvj")
+
+[node name="rightBorder" type="StaticBody2D" parent="." unique_id=2037114425]
+position = Vector2(2459, 332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightBorder" unique_id=1743459108]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="leftBorder" type="StaticBody2D" parent="." unique_id=1451568655]
+position = Vector2(1, 171)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftBorder" unique_id=486307513]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")

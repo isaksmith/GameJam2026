@@ -169,4 +169,6 @@ position = Vector2(7.000001, -67)
 scale = Vector2(1.7890625, 1.7890625)
 sprite_frames = SubResource("SpriteFrames_jfkbx")
 autoplay = "default"
-speed_scale = 2.0
+frame = 12
+frame_progress = 1.0
+speed_scale = 2.5
