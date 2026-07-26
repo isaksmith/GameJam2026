@@ -1,5 +1,7 @@
 # 🐒💥 BABOOM
 
+![BABOOM title art](baboom-image-1.png)
+
 **BABOOM** is a 2D physics game built for the 2026 Game Jam around the theme
 **“Reinvent the Wheel.”**
 
@@ -17,6 +19,12 @@ cart, and discover which designs can overcome each level's terrain.
 Large wheels can clear tall obstacles, smooth wheels roll quickly, and irregular
 or spiky wheels can provide useful grip. There is no single best design—each
 level asks you to reinvent the wheel.
+
+## Screenshots
+
+![Drawing a custom wheel](baboom-image-2.png)
+
+![Monke riding through the jungle](baboom-image-3.png)
 
 ## Controls
 
@@ -71,7 +79,7 @@ Created by Team Monke for the 2026 Game Jam:
 - Wesley, Keaton, and Joanna — development
 - Tammy — art
 
-Isak created a separate expanded minigame version:
+Isak created a minigame version:
 [Banana Genesis Game Jam 2026](https://github.com/isaksmith/BananaGenesisGameJam2026).
 
 ## Play online
