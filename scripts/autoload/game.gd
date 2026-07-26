@@ -116,9 +116,17 @@ func _wire_kill_zone(level: Node) -> void:
 		killZone.body_entered.connect(_on_kill_zone_entered)
 	
 func _on_kill_zone_entered(body: Node) -> void:
-	print(body)
+	
 	if body.is_in_group("cart"):
 		#TODO - ADD EXPLOSION SPRITE AND TIMER BEFORE RESTART
+		body.get_parent().on_kill()
+		var timer = Timer.new()
+		timer.one_shot = true
+		timer.wait_time = 3
+		add_child(timer)
+		timer.start()
+		await timer.timeout
+		timer.queue_free()
 		restart_level()
 
 # ---------------------------------------------------------------------------

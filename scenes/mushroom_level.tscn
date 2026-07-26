@@ -223,9 +223,9 @@ position = Vector2(135, -218)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=252272277]
 zoom = Vector2(0.75, 0.75)
-limit_left = -257
+limit_left = -762
 limit_top = -696
-limit_right = 3939
+limit_right = 4510
 limit_bottom = 1131
 script = ExtResource("5_lv3lf")
 
@@ -238,8 +238,8 @@ texture = ExtResource("6_lv3lf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=355292465]
 z_index = -6
-position = Vector2(1845.5554, 272.125)
-scale = Vector2(10.945022, 9.195602)
+position = Vector2(1873.4998, 272.125)
+scale = Vector2(13.7890625, 9.195602)
 texture = ExtResource("6_lv3lf")
 
 [node name="KillZone" type="Area2D" parent="." unique_id=1657661776]
