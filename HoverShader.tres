@@ -1,0 +1,48 @@
+[gd_resource type="VisualShader" format=3 uid="uid://p43rcuwax6j5"]
+
+[sub_resource type="VisualShaderNodeMultiplyAdd" id="VisualShaderNodeMultiplyAdd_i4x8i"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_jwhw8"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_8pbf1"]
+function = 0
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_8tnrm"]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_gwqqy"]
+default_input_values = [0, 0.0, 1, 1.63]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_ephhu"]
+default_input_values = [0, 0.0, 1, 6.62]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_rng26"]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_d2i6g"]
+output_port_for_preview = 0
+
+[resource]
+mode = 1
+flags/light_only = false
+nodes/vertex/0/position = Vector2(957.6, 302.4)
+nodes/vertex/2/node = SubResource("VisualShaderNodeInput_jwhw8")
+nodes/vertex/2/position = Vector2(-621.6, 100.8)
+nodes/vertex/3/node = SubResource("VisualShaderNodeFloatFunc_8pbf1")
+nodes/vertex/3/position = Vector2(16, 112)
+nodes/vertex/4/node = SubResource("VisualShaderNodeInput_8tnrm")
+nodes/vertex/4/position = Vector2(100.8, 352.8)
+nodes/vertex/5/node = SubResource("VisualShaderNodeFloatOp_gwqqy")
+nodes/vertex/5/position = Vector2(-235.2, 84)
+nodes/vertex/6/node = SubResource("VisualShaderNodeFloatOp_ephhu")
+nodes/vertex/6/position = Vector2(256, 80)
+nodes/vertex/7/node = SubResource("VisualShaderNodeVectorCompose_rng26")
+nodes/vertex/7/position = Vector2(504, 50.4)
+nodes/vertex/9/node = SubResource("VisualShaderNodeVectorOp_d2i6g")
+nodes/vertex/9/position = Vector2(705.6, 336)
+nodes/vertex/10/node = SubResource("VisualShaderNodeMultiplyAdd_i4x8i")
+nodes/vertex/10/position = Vector2(-592, 736)
+nodes/vertex/connections = PackedInt32Array(2, 0, 5, 0, 5, 0, 3, 0, 3, 0, 6, 0, 6, 0, 7, 1, 7, 0, 9, 0, 4, 0, 9, 1, 9, 0, 0, 0)

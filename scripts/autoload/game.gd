@@ -89,6 +89,7 @@ func next_level() -> void:
 func _spawn_cart(level: Node) -> void:
 	var spawn: Marker2D = level.get_node("PlayerSpawn")
 	var cart: Node2D = (load(CART_SCENE) as PackedScene).instantiate()
+	cart.add_to_group("cart")
 	# Add the cart as a CHILD OF THE LEVEL, so reloading the level removes the cart too.
 	level.add_child(cart)
 	cart.global_position = spawn.global_position

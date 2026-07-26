@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
 [ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
+[ext_resource type="Script" uid="uid://bn6ygfwiock1k" path="res://scenes/camera_2d.gd" id="5_cp117"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(180, 64)
@@ -58,5 +59,8 @@ position = Vector2(9, -29)
 scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")
 
-[node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049]
-zoom = Vector2(0.7, 0.7)
+[node name="SubViewport" type="SubViewport" parent="chassis" unique_id=1506046549]
+
+[node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049 groups=["main_camera"]]
+zoom = Vector2(0.71, 0.71)
+script = ExtResource("5_cp117")
