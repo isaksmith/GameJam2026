@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d01tp7srdm82j"]
+
+[ext_resource type="Texture2D" uid="uid://dmme038tq23m7" path="res://assets/sprites/terrain/forest/platform/forest_background.png" id="1_rus8k"]
+[ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="3_4nkto"]
+[ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="3_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_fcfvj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fcfvj"]
+radius = 65.0
+
+[node name="Level1" type="Node2D" unique_id=1536128995]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=860916471]
+texture_repeat = 2
+scale = Vector2(2, 2.339535)
+texture = ExtResource("1_rus8k")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=635204920]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain" unique_id=1928014179]
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+polygon = PackedVector2Array(2.051808, -656.1522, 494.48575, -457.31824, 867.91486, -51.6969, 1520.3898, 334.04102, 2228.2637, 143.1604, 3496.281, 393.69128, 5049.5, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GroundVisual" type="Polygon2D" parent="Terrain" unique_id=1067080249]
+texture_repeat = 2
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+texture = ExtResource("2_5xbjy")
+polygon = PackedVector2Array(2.051808, -656.1522, 494.48575, -457.31824, 867.91486, -51.6969, 1520.3898, 334.04102, 2228.2637, 143.1604, 3496.281, 393.69128, 5049.5, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GrassTop" type="Line2D" parent="Terrain" unique_id=2095101743]
+texture_repeat = 2
+position = Vector2(0, 10)
+points = PackedVector2Array(-3, 232, 235, 281, 423, 385, 738, 481, 1090, 434, 1710, 492, 2462, 479)
+width = 35.0
+texture = ExtResource("3_fcfvj")
+texture_mode = 1
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1055188318]
+position = Vector2(145, 146)
+
+[node name="Decor" type="Node2D" parent="." unique_id=1638624687]
+
+[node name="BushSprite" type="Sprite2D" parent="Decor" unique_id=1816078452]
+position = Vector2(1501, 446)
+scale = Vector2(2.5841875, 2.955314)
+texture = ExtResource("3_5xbjy")
+region_enabled = true
+region_rect = Rect2(147.17111, 56.365303, 41.43489, 26.726524)
+
+[node name="Goal" type="Area2D" parent="." unique_id=1933819385]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1164288341]
+position = Vector2(2289, 420)
+shape = SubResource("CircleShape2D_fcfvj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goal" unique_id=594970125]
+position = Vector2(2282, 400)
+scale = Vector2(0.33666667, 0.33666667)
+texture = ExtResource("3_4nkto")
