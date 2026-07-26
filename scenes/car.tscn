@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dqiyoy2tmw5y4" path="res://scripts/car.gd" id="1_3mrxu"]
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
+[ext_resource type="Texture2D" uid="uid://dcnlvwddfnwd1" path="res://assets/sprites/characters/monkey_scared.png" id="4_3mrxu"]
 [ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
+[ext_resource type="Texture2D" uid="uid://b2miahtoa4j8f" path="res://assets/sprites/characters/monkey_cheer.png" id="5_cp117"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(180, 64)
@@ -16,6 +18,9 @@ script = ExtResource("1_3mrxu")
 [node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392 groups=["cart"]]
 mass = 5.0
 script = ExtResource("1_uoj53")
+normal_texture = ExtResource("5_3mrxu")
+scared_texture = ExtResource("4_3mrxu")
+victory_texture = ExtResource("5_cp117")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chassis" unique_id=183773225]
 shape = SubResource("RectangleShape2D_gueqe")
@@ -57,6 +62,3 @@ z_index = 2
 position = Vector2(9, -29)
 scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")
-
-[node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049]
-zoom = Vector2(0.7, 0.7)

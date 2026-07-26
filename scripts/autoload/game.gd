@@ -105,6 +105,7 @@ func _on_goal_entered(body: Node) -> void:
 	# Only the cart counts. We check for the "cart" group so obstacles/debris don't win.
 	print(body)
 	if body.is_in_group("cart"):
+		body.setVictorySprite()
 		level_won()
 
 

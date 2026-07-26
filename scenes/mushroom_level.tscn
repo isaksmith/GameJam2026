@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8eylwqs54253" path="res://assets/sprites/terrain/grass_floor.png" id="1_e3ttu"]
 [ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_ytui5"]
 [ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
+[ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="5_lv3lf"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_ytui5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
@@ -12,7 +13,7 @@ bounce = 1.0
 size = Vector2(387.00003, 520)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfkbx"]
-radius = 159.0786
+radius = 108.11568
 
 [node name="mushroom_level" type="Node2D" unique_id=346771258]
 
@@ -205,13 +206,21 @@ texture = ExtResource("2_ytui5")
 position = Vector2(3651, 223)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=467681542]
-position = Vector2(-44, 91)
+position = Vector2(-5, 109)
 shape = SubResource("CircleShape2D_jfkbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Goal" unique_id=2073085955]
-position = Vector2(-42, 86)
-scale = Vector2(0.46, 0.46)
+position = Vector2(-7.0000153, 119.000015)
+scale = Vector2(0.32666665, 0.32666665)
 texture = ExtResource("5_ytui5")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=301199655]
 position = Vector2(135, -218)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=252272277]
+zoom = Vector2(0.5, 0.5)
+limit_left = -257
+limit_top = -696
+limit_right = 4121
+limit_bottom = 1131
+script = ExtResource("5_lv3lf")

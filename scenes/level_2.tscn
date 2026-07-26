@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="3_pbc48"]
 [ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_wo48x"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_b4j7a"]
+[ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="7_y0kc7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2qa7"]
 radius = 100.0
@@ -98,3 +99,11 @@ shape = SubResource("CircleShape2D_qv1gd")
 position = Vector2(2282, 400)
 scale = Vector2(0.33666667, 0.33666667)
 texture = ExtResource("5_b4j7a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=102475691]
+position = Vector2(575, 326)
+limit_left = 0
+limit_top = 2
+limit_right = 2457
+limit_bottom = 641
+script = ExtResource("7_y0kc7")
