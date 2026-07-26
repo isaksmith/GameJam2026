@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c586rkdxr7dcw"]
 
 [ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_x7blo"]
-[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="2_yk4f3"]
+[ext_resource type="Texture2D" uid="uid://beo75limfx8a1" path="res://assets/sprites/terrain/forest_bg.png" id="2_yk4f3"]
 [ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_qsmat"]
-[ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="4_qsmat"]
+[ext_resource type="Texture2D" uid="uid://bs4flv7tlyed5" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="4_qsmat"]
 [ext_resource type="Texture2D" uid="uid://dba44y7p2q25s" path="res://assets/sprites/terrain/forest/rocks/rocks_brown.png" id="4_yk4f3"]
 [ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="5_cp0rv"]
 [ext_resource type="Texture2D" uid="uid://8eylwqs54253" path="res://assets/sprites/terrain/grass_floor.png" id="5_yk4f3"]
@@ -35,6 +35,9 @@ size = Vector2(7256, 184.9375)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qv1gd"]
 radius = 216.0
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp0rv"]
+distance = 12.0
+
 [node name="Level4" type="Node2D" unique_id=1698461526]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1976583878]
@@ -44,7 +47,16 @@ scale = Vector2(2, 2.339535)
 texture = ExtResource("2_yk4f3")
 centered = false
 region_enabled = true
-region_rect = Rect2(6.034, 4.525, 16000, 2415.8)
+region_rect = Rect2(6.034, 4.525, 16000, 2007.5343)
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=87845779]
+texture_repeat = 2
+position = Vector2(-24, 774)
+scale = Vector2(2, 2.339535)
+texture = ExtResource("2_yk4f3")
+centered = false
+region_enabled = true
+region_rect = Rect2(6.034, 1507.7357, 16000, 504.3236)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1315145818]
 position = Vector2(575, 326)
@@ -71,7 +83,7 @@ texture_repeat = 2
 position = Vector2(0, 393)
 scale = Vector2(0.48737502, 0.25146607)
 texture = ExtResource("2_x7blo")
-polygon = PackedVector2Array(0, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2347.2686, 318.1344, 3370.031, 328.6621, 4362.144, -656.1522, 4577.584, -644.22217, 4877.148, -123.2771, 5164.401, 210.76404, 5388.0483, 345.97107, 10784.304, 345.97107, 10784.304, 982.24, 0, 1012)
+polygon = PackedVector2Array(0, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2347.2686, 318.1344, 3370.031, 328.6621, 4362.144, -656.1522, 4577.584, -644.22217, 4877.148, -123.2771, 5164.401, 210.76404, 5388.0483, 345.97107, 10784.304, 345.97107, 10784.304, 5459.9814, -43.08797, 5459.9814)
 
 [node name="GrassTop" type="Line2D" parent="Terrain1" unique_id=264764978]
 texture_repeat = 2
@@ -213,7 +225,7 @@ texture_repeat = 2
 position = Vector2(9142.089, 376.81714)
 scale = Vector2(0.48737502, 0.24953102)
 texture = ExtResource("2_x7blo")
-polygon = PackedVector2Array(-4559.301, 381.76123, 396.20313, 381.76123, 397.8672, -99.4552, 594.8418, -99.4552, 594.8418, -484.17688, 808.23047, -484.17688, 808.23047, -868.89856, 1005.2031, -868.89856, 1005.2031, -1253.6204, 1202.1777, -1253.6204, 1202.1777, -1638.342, 1399.1504, -1638.342, 1399.1504, -2023.0637, 1579.709, -2023.0637, 1579.709, -2407.7854, 1776.6836, -2407.7854, 1776.6836, -2760.447, 1957.2422, -2760.447, 1957.2422, -3081.0483, 2121.3867, -3113.1084, 2580.9922, -3113.1084, 2912.8896, -3083.12, 3191.9355, -2955.8662, 3470.9814, -2415.0378, 3848.5146, -1397.0078, 4226.168, -712.2328, 4570.871, -231.33057, 4981.2324, -6.909668, 5243.743, 2.7834473, 5834.665, -92.65686, 6294.2705, -378.97778, 6569.707, -644.4776, 6832.338, -1093.3196, 7012.8984, -1542.1616, 7374.0156, -2760.447, 7439.674, -2696.3267, 7423.26, 1051.0754, -4559.301, 1051.0752)
+polygon = PackedVector2Array(-4559.301, 381.76123, 396.20313, 381.76123, 397.8672, -99.4552, 594.8418, -99.4552, 594.8418, -484.17688, 808.23047, -484.17688, 808.23047, -868.89856, 1005.2031, -868.89856, 1005.2031, -1253.6204, 1202.1777, -1253.6204, 1202.1777, -1638.342, 1399.1504, -1638.342, 1399.1504, -2023.0637, 1579.709, -2023.0637, 1579.709, -2407.7854, 1776.6836, -2407.7854, 1776.6836, -2760.447, 1957.2422, -2760.447, 1957.2422, -3081.0483, 2121.3867, -3113.1084, 2580.9922, -3113.1084, 2912.8896, -3083.12, 3191.9355, -2955.8662, 3470.9814, -2415.0378, 3848.5146, -1397.0078, 4226.168, -712.2328, 4570.871, -231.33057, 4981.2324, -6.909668, 5243.743, 2.7834473, 5834.665, -92.65686, 6294.2705, -378.97778, 6569.707, -644.4776, 6832.338, -1093.3196, 7012.8984, -1542.1616, 7374.0156, -2760.447, 7439.674, -2696.3267, 7423.26, 5535.1147, -4559.301, 5543.13)
 
 [node name="GrassTop" type="Line2D" parent="Terrain2" unique_id=1667005026]
 texture_repeat = 2
@@ -351,4 +363,8 @@ position = Vector2(16501.002, -667)
 scale = Vector2(0.33666667, 0.33666667)
 texture = ExtResource("6_rr1tt")
 
-[node name="Kill Zone" type="Area2D" parent="." unique_id=490559357]
+[node name="KillZone" type="Area2D" parent="." unique_id=1530887541]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=397592170]
+position = Vector2(5370, 912)
+shape = SubResource("WorldBoundaryShape2D_cp0rv")

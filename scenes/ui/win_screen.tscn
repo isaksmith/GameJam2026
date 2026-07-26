@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dsp628h440nui"]
 
 [ext_resource type="Script" uid="uid://b7bf18cywftgr" path="res://scripts/ui/win_screen.gd" id="1_1cgod"]
+[ext_resource type="FontFile" uid="uid://bneyjfvrdvkx4" path="res://assets/fonts/SHOWG.TTF" id="2_uqtu8"]
 
 [node name="WinScreen" type="Control" unique_id=1513104981]
 process_mode = 3
@@ -38,14 +39,21 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="Box" unique_id=1988649562]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uqtu8")
+theme_override_font_sizes/font_size = 24
 text = "Princess Baboon Reached!
 "
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="NextButton" type="Button" parent="Box" unique_id=1226059240]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uqtu8")
+theme_override_font_sizes/font_size = 18
 text = "Next"
 
 [node name="RetryButton" type="Button" parent="Box" unique_id=1555834833]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uqtu8")
+theme_override_font_sizes/font_size = 18
 text = "Retry"
