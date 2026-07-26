@@ -53,7 +53,7 @@ position = Vector2(1.9073486e-06, 0)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=1062075541]
 
 [node name="chassisSprite" type="Sprite2D" parent="chassis" unique_id=2122506071]
-z_index = -1
+z_index = 2
 position = Vector2(9, -29)
 scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")

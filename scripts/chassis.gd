@@ -9,7 +9,7 @@ extends RigidBody2D
 
 func _physics_process(delta: float) -> void:
 	#  Get horizontal input (-1 for left, 1 for right, 0 for none)
-
+	print(rotation)
 
 	var move_input := Input.get_axis("ui_left", "ui_right")
 	if move_input != 0:
