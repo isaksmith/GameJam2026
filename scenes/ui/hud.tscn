@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3gu4iso7mpjs"]
 
 [ext_resource type="Script" uid="uid://7saulhysyh12" path="res://scripts/ui/hud.gd" id="1_0mwgc"]
+[ext_resource type="FontFile" uid="uid://bneyjfvrdvkx4" path="res://assets/fonts/SHOWG.TTF" id="2_hqnrr"]
 
 [node name="HUD" type="Control" unique_id=1139336182]
 layout_mode = 3
@@ -22,4 +23,6 @@ offset_top = 14.0
 offset_right = -15.0
 offset_bottom = 72.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_hqnrr")
+theme_override_font_sizes/font_size = 29
 text = "⟳"
