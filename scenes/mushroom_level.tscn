@@ -280,3 +280,11 @@ z_index = -6
 position = Vector2(5081, 246.00002)
 scale = Vector2(1.218, 1.218)
 texture = ExtResource("7_4hhyd")
+
+[node name="topBorder" type="StaticBody2D" parent="." unique_id=615650410]
+position = Vector2(2469, -1266)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topBorder" unique_id=1411910508]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_jfkbx")

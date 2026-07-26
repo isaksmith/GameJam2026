@@ -155,3 +155,11 @@ scale = Vector2(0.4166667, 0.48740306)
 texture = ExtResource("1_y0kc7")
 centered = false
 region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="topBorder" type="StaticBody2D" parent="." unique_id=2043933469]
+position = Vector2(1840, -654)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topBorder" unique_id=392368458]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_ne2mo")

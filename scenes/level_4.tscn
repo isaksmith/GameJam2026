@@ -38,6 +38,9 @@ radius = 216.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp0rv"]
 distance = 12.0
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rr1tt"]
+distance = -2.0
+
 [node name="Level4" type="Node2D" unique_id=1698461526]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1976583878]
@@ -368,3 +371,11 @@ texture = ExtResource("6_rr1tt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=397592170]
 position = Vector2(5370, 912)
 shape = SubResource("WorldBoundaryShape2D_cp0rv")
+
+[node name="topBorder" type="StaticBody2D" parent="." unique_id=981763587]
+position = Vector2(4726, -4213)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topBorder" unique_id=1356451552]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_rr1tt")
