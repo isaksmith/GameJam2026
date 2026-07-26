@@ -2,6 +2,8 @@ extends CanvasLayer
 @onready var color_rect = %ColorRect
 @onready var monkey_hand = %MonkeyHand
 
+var _original_zoom: Vector2 = Vector2(1, 1)
+
 func _ready() -> void:
 	pass # Replace with function body.
 	
@@ -9,6 +11,7 @@ func trigger_camera_action():
 	monkey_hand.modulate.a = 0.0
 	var camera = get_tree().get_first_node_in_group("main_camera")
 	if camera:
+		_original_zoom = camera.zoom # store the zoom level this level started with
 		camera.zoom_to(Vector2(3,3),1.5) 
 	var tween = create_tween()
 	var target_pos = Vector2(offset.x, 0.0) # Replace with your target Y position
@@ -31,7 +34,7 @@ func done():
 	 	.set_ease(Tween.EASE_OUT)
 	var camera = get_tree().get_first_node_in_group("main_camera")
 	if camera:
-		camera.zoom_to(Vector2(1,1),1.5) 
+		camera.zoom_to(_original_zoom, 1.5) 
 	var tween2 = create_tween()
 	tween2.tween_property(monkey_hand, "modulate:a", 0, 0.4)
 
