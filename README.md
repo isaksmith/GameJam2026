@@ -1,6 +1,10 @@
 # 🐒💥 BABOOM
 
-![BABOOM title art](baboom-image-1.png)
+<p align="center">
+  <img src="baboom-image-1.png" alt="BABOOM title art" width="32%">
+  <img src="baboom-image-2.png" alt="Drawing a custom wheel" width="32%">
+  <img src="baboom-image-3.png" alt="Monke riding through the jungle" width="32%">
+</p>
 
 [Play BABOOM! - original game jam submission](https://itch.io/jam/ict-game-jam-summer-2026/rate/4830541)
 
@@ -21,12 +25,6 @@ cart, and discover which designs can overcome each level's terrain.
 Large wheels can clear tall obstacles, smooth wheels roll quickly, and irregular
 or spiky wheels can provide useful grip. There is no single best design; each
 level asks you to reinvent the wheel.
-
-## Screenshots
-
-![Drawing a custom wheel](baboom-image-2.png)
-
-![Monke riding through the jungle](baboom-image-3.png)
 
 ## Controls
 
