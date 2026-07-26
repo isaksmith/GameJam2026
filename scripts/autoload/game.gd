@@ -8,7 +8,7 @@ extends Node
 # The ordered list of levels. For now it points at your Level 2 so we can test.
 # This is the ONE place levels are listed — add new level paths here as they're made.
 const LEVELS: Array[String] = [
-	"res://scenes/_dev/placeholder_level.tscn",
+	"res://scenes/level_1.tscn",
 	"res://scenes/level_2.tscn",
 	"res://scenes/mushroom_level.tscn",
 ]
@@ -68,6 +68,8 @@ func load_level(index: int) -> void:
 	_spawn_cart(level)
 	_wire_goal(level)
 	canvas_layer.delayed_trigger_camera_action()
+	_wire_kill_zone(level)
+
 
 ## The RETRY. Reloading the current level clears the crashed cart and starts fresh.
 ## This is the core of the redraw -> fail -> retry loop.
@@ -117,8 +119,27 @@ func _on_goal_entered(body: Node) -> void:
 	# Only the cart counts. We check for the "cart" group so obstacles/debris don't win.
 	print(body)
 	if body.is_in_group("cart"):
+		body.setVictorySprite()
 		level_won()
 
+
+func _wire_kill_zone(level: Node) -> void:
+	var killZone: Area2D = level.get_node("KillZone")
+	if(is_instance_valid(killZone)):
+		killZone.body_entered.connect(_on_kill_zone_entered)
+	
+func _on_kill_zone_entered(body: Node) -> void:
+	
+	if body.is_in_group("cart"):
+		body.get_parent().on_kill()
+		var timer = Timer.new()
+		timer.one_shot = true
+		timer.wait_time = 3
+		add_child(timer)
+		timer.start()
+		await timer.timeout
+		timer.queue_free()
+		restart_level()
 
 # ---------------------------------------------------------------------------
 # Outcomes  (connecting them to UI screens as we go)

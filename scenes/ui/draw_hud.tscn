@@ -22,9 +22,10 @@ size = Vector2(1, 1)
 
 [node name="DrawButton" type="TextureButton" parent="DrawCanvasLayer" unique_id=596190092]
 unique_name_in_owner = true
-offset_left = 980.0
-offset_right = 1141.0
-offset_bottom = 129.0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 165.0
+offset_bottom = 134.0
 disabled = true
 texture_normal = ExtResource("1_xcfcs")
 ignore_texture_size = true

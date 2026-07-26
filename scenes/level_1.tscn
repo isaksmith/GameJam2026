@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://d01tp7srdm82j"]
+
+[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="1_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="3_4nkto"]
+[ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="3_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_fcfvj"]
+[ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="6_fcfvj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fcfvj"]
+radius = 65.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
+distance = 12.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
+distance = -2.0
+
+[node name="Level1" type="Node2D" unique_id=1536128995]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=860916471]
+texture_repeat = 2
+position = Vector2(5, -205.00002)
+scale = Vector2(0.52135414, 0.6098632)
+texture = ExtResource("1_fcfvj")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=635204920]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain" unique_id=1928014179]
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+polygon = PackedVector2Array(2.051808, -656.1522, 494.48575, -457.31824, 867.91486, -51.6969, 1520.3898, 334.04102, 2228.2637, 143.1604, 3496.281, 393.69128, 5049.5, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GroundVisual" type="Polygon2D" parent="Terrain" unique_id=1067080249]
+texture_repeat = 2
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+texture = ExtResource("2_5xbjy")
+polygon = PackedVector2Array(2.051808, -656.1522, 494.48575, -457.31824, 867.91486, -51.6969, 1520.3898, 334.04102, 2228.2637, 143.1604, 3496.281, 393.69128, 5049.5, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GrassTop" type="Line2D" parent="Terrain" unique_id=2095101743]
+texture_repeat = 2
+position = Vector2(0, 10)
+points = PackedVector2Array(-3, 232, 235, 281, 423, 385, 738, 481, 1090, 434, 1710, 492, 2462, 479)
+width = 35.0
+texture = ExtResource("3_fcfvj")
+texture_mode = 1
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1055188318]
+position = Vector2(145, 146)
+
+[node name="Decor" type="Node2D" parent="." unique_id=1638624687]
+
+[node name="BushSprite" type="Sprite2D" parent="Decor" unique_id=1816078452]
+position = Vector2(1501, 446)
+scale = Vector2(2.5841875, 2.955314)
+texture = ExtResource("3_5xbjy")
+region_enabled = true
+region_rect = Rect2(147.17111, 56.365303, 41.43489, 26.726524)
+
+[node name="Goal" type="Area2D" parent="." unique_id=1933819385]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1164288341]
+position = Vector2(2289, 420)
+shape = SubResource("CircleShape2D_fcfvj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goal" unique_id=594970125]
+position = Vector2(2282, 400)
+scale = Vector2(0.33666667, 0.33666667)
+texture = ExtResource("3_4nkto")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=986230265]
+limit_left = 0
+limit_top = 3
+limit_right = 2457
+limit_bottom = 638
+script = ExtResource("6_fcfvj")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1144117522]
+position = Vector2(68, 646)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1938256901]
+position = Vector2(2135, 1164)
+shape = SubResource("WorldBoundaryShape2D_fcfvj")
+
+[node name="rightBorder" type="StaticBody2D" parent="." unique_id=2037114425]
+position = Vector2(2459, 332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightBorder" unique_id=1743459108]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="leftBorder" type="StaticBody2D" parent="." unique_id=1451568655]
+position = Vector2(1, 171)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftBorder" unique_id=486307513]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=227333462]
+z_index = -6
+texture_repeat = 2
+position = Vector2(1005, -205)
+scale = Vector2(0.52135414, 0.6098632)
+texture = ExtResource("1_fcfvj")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="Background3" type="Sprite2D" parent="." unique_id=539908451]
+z_index = -5
+texture_repeat = 2
+position = Vector2(2002, -205)
+scale = Vector2(0.52135414, 0.6098632)
+texture = ExtResource("1_fcfvj")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)

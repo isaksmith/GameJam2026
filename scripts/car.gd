@@ -5,6 +5,15 @@ extends Node2D
 @onready var rear_wheel_sprite = $chassis/PinJoint2D_Rear/rearWheel/Sprite2D
 
 
+func on_kill():
+	print("killed :(")
+	$AnimatedSprite2D.position = $chassis.position + Vector2(0,-60)
+	$chassis/chassisSprite.visible = false
+	$AnimatedSprite2D.visible = true
+	$AnimatedSprite2D.visible = true
+	$AnimatedSprite2D.frame = 0
+	$AnimatedSprite2D.play("default")
+	pass
 
 func apply_custom_texture(texture):
 	front_wheel_sprite.texture = texture

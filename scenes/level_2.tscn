@@ -1,19 +1,64 @@
 [gd_scene format=3 uid="uid://pnf8820denx"]
 
+[ext_resource type="Texture2D" uid="uid://dba44y7p2q25s" path="res://assets/sprites/terrain/forest/rocks/rocks_brown.png" id="1_3bmlt"]
+[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="1_y0kc7"]
+[ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_eqxsl"]
+[ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="3_pbc48"]
+[ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_wo48x"]
+[ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_b4j7a"]
+[ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="7_y0kc7"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2qa7"]
 radius = 100.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qv1gd"]
-radius = 150.0
+radius = 65.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y0kc7"]
+distance = 12.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ne2mo"]
+distance = -2.0
 
 [node name="Level2" type="Node2D" unique_id=1698461526]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1976583878]
+texture_repeat = 2
+position = Vector2(1.9999962, -2.9999695)
+scale = Vector2(0.4166667, 0.48740306)
+texture = ExtResource("1_y0kc7")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)
 
 [node name="Terrain" type="StaticBody2D" parent="." unique_id=954511662]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain" unique_id=21935796]
 position = Vector2(0, 393)
 scale = Vector2(0.48737502, 0.25146607)
-polygon = PackedVector2Array(4.103616, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2626.3145, 306.20435, 5051.552, 345.97107, 5061.8105, 1000, 0, 1012)
+polygon = PackedVector2Array(4.103616, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2347.2686, 318.1344, 5051.552, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GroundVisual" type="Polygon2D" parent="Terrain" unique_id=526142035]
+texture_repeat = 2
+position = Vector2(0, 393)
+scale = Vector2(0.48737502, 0.25146607)
+texture = ExtResource("2_eqxsl")
+polygon = PackedVector2Array(0, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2347.2686, 318.1344, 5051.552, 345.97107, 5061.8105, 1000, 0, 1012)
+
+[node name="GrassTop" type="Line2D" parent="Terrain" unique_id=1320206405]
+visible = false
+position = Vector2(0, 10)
+points = PackedVector2Array(0, 232, 18, 232, 158, 246, 1144, 476, 2462, 479)
+width = 35.0
+texture = ExtResource("3_wo48x")
+texture_mode = 1
+
+[node name="GrassTop2" type="Line2D" parent="Terrain" unique_id=264764978]
+texture_repeat = 2
+position = Vector2(0, 10)
+points = PackedVector2Array(-3, 232, 154, 251, 750, 397, 1145, 479, 1704, 482, 2462, 486)
+width = 35.0
+texture = ExtResource("3_wo48x")
+texture_mode = 1
 
 [node name="Boulder" type="StaticBody2D" parent="." unique_id=765745447]
 
@@ -21,11 +66,98 @@ polygon = PackedVector2Array(4.103616, -660.1289, 324.18567, -592.5253, 818.6714
 position = Vector2(1679, 380)
 shape = SubResource("CircleShape2D_l2qa7")
 
+[node name="RockSprite" type="Sprite2D" parent="Boulder" unique_id=1383047803]
+position = Vector2(1701.5, 352)
+scale = Vector2(2.197081, 2.9375)
+texture = ExtResource("1_3bmlt")
+region_enabled = true
+region_rect = Rect2(130.5, 0, 137, 128)
+
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1192992925]
 position = Vector2(237, 116)
+
+[node name="Decor" type="Node2D" parent="." unique_id=116306514]
+
+[node name="FlowerSprite" type="Sprite2D" parent="Decor" unique_id=1478216545]
+position = Vector2(349.26, 280.5053)
+rotation = 0.2617994
+scale = Vector2(3.4270113, 4.350542)
+texture = ExtResource("3_pbc48")
+region_enabled = true
+region_rect = Rect2(218.68529, 13.6168785, 37.49666, 20.188156)
+
+[node name="BushSprite" type="Sprite2D" parent="Decor" unique_id=1319828931]
+position = Vector2(1250, 447.00003)
+scale = Vector2(2.5841875, 2.955314)
+texture = ExtResource("3_pbc48")
+region_enabled = true
+region_rect = Rect2(147.17111, 56.365303, 41.43489, 26.726524)
+
+[node name="Sprite2D" type="Sprite2D" parent="Decor" unique_id=2087853385]
 
 [node name="Goal" type="Area2D" parent="." unique_id=1770429971]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1763548330]
-position = Vector2(2224, 337)
+position = Vector2(2289, 420)
 shape = SubResource("CircleShape2D_qv1gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goal" unique_id=1427974356]
+position = Vector2(2282, 400)
+scale = Vector2(0.33666667, 0.33666667)
+texture = ExtResource("5_b4j7a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=102475691]
+position = Vector2(575, 326)
+limit_left = 0
+limit_top = 2
+limit_right = 2457
+limit_bottom = 641
+script = ExtResource("7_y0kc7")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=2112402768]
+position = Vector2(131, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2132721172]
+position = Vector2(2135, 1164)
+shape = SubResource("WorldBoundaryShape2D_y0kc7")
+
+[node name="rightBorder" type="StaticBody2D" parent="." unique_id=1300634304]
+position = Vector2(2460, 267)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightBorder" unique_id=1149052527]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_ne2mo")
+
+[node name="leftBorder" type="StaticBody2D" parent="." unique_id=701573287]
+position = Vector2(0, 179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftBorder" unique_id=1724503717]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_ne2mo")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=270256180]
+z_index = -2
+texture_repeat = 2
+position = Vector2(802, -3)
+scale = Vector2(0.4166667, 0.48740306)
+texture = ExtResource("1_y0kc7")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="Background3" type="Sprite2D" parent="." unique_id=384378009]
+z_index = -2
+texture_repeat = 2
+position = Vector2(1602, -3)
+scale = Vector2(0.4166667, 0.48740306)
+texture = ExtResource("1_y0kc7")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)
+
+[node name="Background4" type="Sprite2D" parent="." unique_id=1484819618]
+z_index = -2
+texture_repeat = 2
+position = Vector2(2396, -3)
+scale = Vector2(0.4166667, 0.48740306)
+texture = ExtResource("1_y0kc7")
+centered = false
+region_rect = Rect2(0, 0, 1230, 215.778)

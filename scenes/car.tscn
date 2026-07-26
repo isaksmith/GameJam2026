@@ -3,13 +3,115 @@
 [ext_resource type="Script" uid="uid://dqiyoy2tmw5y4" path="res://scripts/car.gd" id="1_3mrxu"]
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
+[ext_resource type="Texture2D" uid="uid://dcnlvwddfnwd1" path="res://assets/sprites/characters/monkey_scared.png" id="4_3mrxu"]
 [ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
-[ext_resource type="Script" uid="uid://bn6ygfwiock1k" path="res://scenes/camera_2d.gd" id="5_cp117"]
+[ext_resource type="Texture2D" uid="uid://b2miahtoa4j8f" path="res://assets/sprites/characters/monkey_cheer.png" id="5_cp117"]
+[ext_resource type="Texture2D" uid="uid://p53ier8ay24h" path="res://assets/sprites/fx/spritsheet.png" id="7_4clw4"]
+[ext_resource type="Script" uid="uid://bn6ygfwiock1k" path="res://scenes/camera_2d.gd" id="7_ctevm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(180, 64)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jtldb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctevm"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uraa1"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm33m"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugdpj"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hylxu"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mia2"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1jdg"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vqyg"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8qg8"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f45sw"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqyfr"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5alo1"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4clw4"]
+atlas = ExtResource("7_4clw4")
+region = Rect2(0, 0, 128, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfkbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctevm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uraa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm33m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugdpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hylxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mia2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1jdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vqyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8qg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f45sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqyfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5alo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4clw4")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Car" type="Node2D" unique_id=1932826611]
 script = ExtResource("1_3mrxu")
@@ -17,6 +119,9 @@ script = ExtResource("1_3mrxu")
 [node name="chassis" type="RigidBody2D" parent="." unique_id=1543403392 groups=["cart"]]
 mass = 5.0
 script = ExtResource("1_uoj53")
+normal_texture = ExtResource("5_3mrxu")
+scared_texture = ExtResource("4_3mrxu")
+victory_texture = ExtResource("5_cp117")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chassis" unique_id=183773225]
 shape = SubResource("RectangleShape2D_gueqe")
@@ -63,4 +168,14 @@ texture = ExtResource("5_3mrxu")
 
 [node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049 groups=["main_camera"]]
 zoom = Vector2(0.71, 0.71)
-script = ExtResource("5_cp117")
+script = ExtResource("7_ctevm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=81058360]
+visible = false
+position = Vector2(7.000001, -67)
+scale = Vector2(1.7890625, 1.7890625)
+sprite_frames = SubResource("SpriteFrames_jfkbx")
+autoplay = "default"
+frame = 12
+frame_progress = 1.0
+speed_scale = 2.5
