@@ -21,10 +21,6 @@ func _input(event: InputEvent) -> void:
 		else:
 			is_drawing = false
 			current_line = null
-	if event is InputEventKey and event.pressed:
-		if event.pressed:
-			if event.keycode == KEY_S:
-				save_drawing()
 
 	elif event is InputEventMouseMotion and is_drawing:
 		if current_line && is_mouse_inside==true:

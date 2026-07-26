@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://8eylwqs54253" path="res://assets/sprites/terrain/grass_floor.png" id="1_e3ttu"]
 [ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_ytui5"]
-[ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
+[ext_resource type="Texture2D" uid="uid://bs4flv7tlyed5" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
 [ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="5_lv3lf"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_ytui5"]
 [ext_resource type="Texture2D" uid="uid://dmme038tq23m7" path="res://assets/sprites/terrain/forest/platform/forest_background.png" id="6_lv3lf"]
-[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="7_4hhyd"]
+[ext_resource type="Texture2D" uid="uid://beo75limfx8a1" path="res://assets/sprites/terrain/forest_bg.png" id="7_4hhyd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
 bounce = 1.0

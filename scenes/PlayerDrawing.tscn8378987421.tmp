@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cs5gdsoxevog1" path="res://assets/sprites/ui/done_button.png" id="10_f0h2q"]
 [ext_resource type="Script" uid="uid://cxqf2j087gim" path="res://scenes/done.gd" id="11_10tcn"]
 [ext_resource type="Texture2D" uid="uid://cji56q41g0oax" path="res://assets/sprites/ui/clear_button.png" id="11_54edb"]
-[ext_resource type="Script" uid="uid://cncao1ylsqjoi" path="res://scenes/clear.gd" id="13_10tcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bw7c"]
 size = Vector2(798, 177)
@@ -38,19 +37,54 @@ script = ExtResource("3_4sxc4")
 
 [node name="FrontWheel" type="RigidBody2D" parent="." unique_id=1823785593]
 unique_name_in_owner = true
-visible = false
 position = Vector2(260, 119)
 freeze = true
 script = ExtResource("2_tee38")
 
 [node name="Sprite2D" type="Sprite2D" parent="FrontWheel" unique_id=81602725]
 unique_name_in_owner = true
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FrontWheel" unique_id=1503785906]
 unique_name_in_owner = true
-visible = false
 polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="BackWheel" type="RigidBody2D" parent="." unique_id=79121045]
+unique_name_in_owner = true
+position = Vector2(260, 119)
+freeze = true
+
+[node name="BackSprite2D" type="Sprite2D" parent="BackWheel" unique_id=1071009877]
+unique_name_in_owner = true
+
+[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="BackWheel" unique_id=1118838776]
+unique_name_in_owner = true
+polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="GroundTesting" type="StaticBody2D" parent="." unique_id=1637020365]
+position = Vector2(501, 278)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundTesting" unique_id=133449724]
+position = Vector2(-84, 287)
+shape = SubResource("RectangleShape2D_0bw7c")
+one_way_collision = true
+
+[node name="CarRigidbody" type="RigidBody2D" parent="." unique_id=222145915]
+unique_name_in_owner = true
+position = Vector2(469, 223)
+freeze = true
+
+[node name="BackWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=72170097]
+unique_name_in_owner = true
+position = Vector2(-82, 25)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="FrontWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=1109445076]
+unique_name_in_owner = true
+position = Vector2(88, 26)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarRigidbody" unique_id=894566389]
+shape = SubResource("RectangleShape2D_ufqy1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2072650821]
 unique_name_in_owner = true
@@ -82,14 +116,10 @@ offset_right = 735.0
 offset_bottom = 450.0
 script = ExtResource("2_w6j36")
 
-[node name="MonkeyHand" type="TextureRect" parent="CanvasLayer" unique_id=2012565960]
-unique_name_in_owner = true
-process_mode = 4
-z_index = 2
-offset_left = 988.0
-offset_top = 614.0
-offset_right = 1757.0
-offset_bottom = 1529.0
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=2012565960]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(-22.055, -40.685)
 mouse_filter = 2
@@ -98,9 +128,9 @@ script = ExtResource("6_51sjg")
 
 [node name="DoneButton" type="TextureButton" parent="CanvasLayer" unique_id=1994120861]
 offset_left = 754.0
-offset_top = 248.0
+offset_top = 219.0
 offset_right = 933.0
-offset_bottom = 425.0
+offset_bottom = 396.0
 texture_normal = ExtResource("10_f0h2q")
 ignore_texture_size = true
 stretch_mode = 5
@@ -108,67 +138,16 @@ script = ExtResource("11_10tcn")
 
 [node name="ClearButton" type="TextureButton" parent="CanvasLayer" unique_id=1504141791]
 offset_left = 233.0
-offset_top = 240.0
+offset_top = 211.0
 offset_right = 415.0
-offset_bottom = 421.0
+offset_bottom = 392.0
 texture_normal = ExtResource("11_54edb")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("13_10tcn")
-
-[node name="BackWheel" type="RigidBody2D" parent="." unique_id=79121045]
-unique_name_in_owner = true
-visible = false
-position = Vector2(260, 119)
-freeze = true
-
-[node name="BackSprite2D" type="Sprite2D" parent="BackWheel" unique_id=1071009877]
-unique_name_in_owner = true
-visible = false
-
-[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="BackWheel" unique_id=1118838776]
-unique_name_in_owner = true
-visible = false
-polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
-
-[node name="GroundTesting" type="StaticBody2D" parent="." unique_id=1637020365]
-position = Vector2(501, 278)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundTesting" unique_id=133449724]
-position = Vector2(-84, 287)
-shape = SubResource("RectangleShape2D_0bw7c")
-one_way_collision = true
-
-[node name="CarRigidbody" type="RigidBody2D" parent="." unique_id=222145915]
-unique_name_in_owner = true
-visible = false
-position = Vector2(469, 223)
-freeze = true
-
-[node name="BackWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=72170097]
-unique_name_in_owner = true
-visible = false
-position = Vector2(-82, 25)
-scale = Vector2(0.1015625, 0.1015625)
-
-[node name="FrontWheelAxis" type="Node2D" parent="CarRigidbody" unique_id=1109445076]
-unique_name_in_owner = true
-visible = false
-position = Vector2(88, 26)
-scale = Vector2(0.1015625, 0.1015625)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CarRigidbody" unique_id=894566389]
-visible = false
-shape = SubResource("RectangleShape2D_ufqy1")
 
 [connection signal="mouse_entered" from="CanvasLayer2/TextureButton" to="CanvasLayer2/TextureButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer2/TextureButton" to="CanvasLayer2/TextureButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer2/TextureButton" to="CanvasLayer2/TextureButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" to="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" to="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_pressed"]

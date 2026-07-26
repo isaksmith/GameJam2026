@@ -4,20 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://dsp628h440nui" path="res://scenes/ui/win_screen.tscn" id="2_piagw"]
 [ext_resource type="PackedScene" uid="uid://b3gu4iso7mpjs" path="res://scenes/ui/hud.tscn" id="2_r238m"]
 [ext_resource type="PackedScene" uid="uid://cmk20t1y61x0c" path="res://scenes/ui/pause_menu.tscn" id="4_m6w7x"]
-[ext_resource type="Texture2D" uid="uid://di8fpw7r2fose" path="res://assets/sprites/ui/draw_button.png" id="6_vbt2j"]
-[ext_resource type="Script" uid="uid://dked357jttas3" path="res://scenes/DrawButton.gd" id="7_3fau3"]
-[ext_resource type="Script" uid="uid://c3xy5xm5fjkyk" path="res://scenes/canvas_layer.gd" id="8_mjdch"]
-[ext_resource type="Texture2D" uid="uid://bk278y5htfpx2" path="res://assets/sprites/ui/drawing_wheels_no_hands_UI.png" id="9_jwvkw"]
-[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://scripts/color_rect.gd" id="10_4ckjr"]
-[ext_resource type="Texture2D" uid="uid://2bso4nh4mmid" path="res://assets/sprites/ui/monkey_hands.png" id="11_e85qb"]
-[ext_resource type="Script" uid="uid://cetxtub18qoyg" path="res://scenes/texture_rect_2.gd" id="12_glepj"]
-[ext_resource type="Texture2D" uid="uid://cs5gdsoxevog1" path="res://assets/sprites/ui/done_button.png" id="13_hxcxk"]
-[ext_resource type="Script" uid="uid://cxqf2j087gim" path="res://scenes/done.gd" id="14_8lcvf"]
-[ext_resource type="Texture2D" uid="uid://cji56q41g0oax" path="res://assets/sprites/ui/clear_button.png" id="15_i4p3k"]
-[ext_resource type="Script" uid="uid://cncao1ylsqjoi" path="res://scenes/clear.gd" id="16_32143"]
-[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="17_6qdij"]
+[ext_resource type="Texture2D" uid="uid://di8fpw7r2fose" path="res://assets/sprites/ui/draw_button.png" id="5_tipxy"]
+[ext_resource type="Script" uid="uid://dked357jttas3" path="res://scenes/DrawButton.gd" id="6_5yl8e"]
+[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="7_5yl8e"]
+[ext_resource type="Script" uid="uid://c3xy5xm5fjkyk" path="res://scenes/canvas_layer.gd" id="7_vbt2j"]
+[ext_resource type="Texture2D" uid="uid://bk278y5htfpx2" path="res://assets/sprites/ui/drawing_wheels_no_hands_UI.png" id="8_3fau3"]
+[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://scripts/color_rect.gd" id="9_mjdch"]
+[ext_resource type="Texture2D" uid="uid://2bso4nh4mmid" path="res://assets/sprites/ui/monkey_hands.png" id="10_jwvkw"]
+[ext_resource type="Script" uid="uid://cetxtub18qoyg" path="res://scenes/texture_rect_2.gd" id="11_4ckjr"]
+[ext_resource type="Texture2D" uid="uid://cs5gdsoxevog1" path="res://assets/sprites/ui/done_button.png" id="12_e85qb"]
+[ext_resource type="Script" uid="uid://cxqf2j087gim" path="res://scenes/done.gd" id="13_glepj"]
+[ext_resource type="Texture2D" uid="uid://cji56q41g0oax" path="res://assets/sprites/ui/clear_button.png" id="14_hxcxk"]
+[ext_resource type="Script" uid="uid://cncao1ylsqjoi" path="res://scenes/clear.gd" id="15_8lcvf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yl8e"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbt2j"]
 size = Vector2(1, 1)
 
 [node name="LevelHost" type="Node2D" unique_id=164218133]
@@ -33,52 +33,50 @@ script = ExtResource("1_11g33")
 
 [node name="PauseMenu" parent="UILayer" unique_id=1097502891 instance=ExtResource("4_m6w7x")]
 
-[node name="DrawCanvasLayer" type="CanvasLayer" parent="." unique_id=1140052475]
+[node name="DrawCanvasLayer" type="CanvasLayer" parent="." unique_id=2019568217]
 
-[node name="DrawButton" type="TextureButton" parent="DrawCanvasLayer" unique_id=451375027]
+[node name="DrawButton" type="TextureButton" parent="DrawCanvasLayer" unique_id=1038230645]
 unique_name_in_owner = true
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 165.0
-offset_bottom = 134.0
+offset_left = 980.0
+offset_right = 1141.0
+offset_bottom = 129.0
 disabled = true
-texture_normal = ExtResource("6_vbt2j")
+texture_normal = ExtResource("5_tipxy")
 ignore_texture_size = true
 stretch_mode = 6
-script = ExtResource("7_3fau3")
-metadata/_edit_use_anchors_ = true
+script = ExtResource("6_5yl8e")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1595476889]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1051245122]
 unique_name_in_owner = true
 offset = Vector2(0, 700)
 transform = Transform2D(1, 0, 0, 1, 0, 700)
-script = ExtResource("8_mjdch")
+script = ExtResource("7_vbt2j")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=41766342]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=177459963]
 offset_right = 1153.0
 offset_bottom = 588.9375
-texture = ExtResource("9_jwvkw")
+texture = ExtResource("8_3fau3")
 expand_mode = 5
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=1897953694]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=183651595]
 offset_right = 1157.0
 offset_bottom = 797.0
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=885796228]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=951150291]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(923, 797)
 render_target_update_mode = 4
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=1785951579]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=2098174310]
 unique_name_in_owner = true
 offset_left = 420.0
 offset_top = 130.0
 offset_right = 735.0
 offset_bottom = 450.0
-script = ExtResource("10_4ckjr")
+script = ExtResource("9_mjdch")
 
-[node name="MonkeyHand" type="TextureRect" parent="CanvasLayer" unique_id=1976144961]
+[node name="MonkeyHand" type="TextureRect" parent="CanvasLayer" unique_id=1560136532]
 unique_name_in_owner = true
 process_mode = 4
 z_index = 2
@@ -89,77 +87,77 @@ offset_bottom = 1529.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(-22.055, -40.685)
 mouse_filter = 2
-texture = ExtResource("11_e85qb")
-script = ExtResource("12_glepj")
+texture = ExtResource("10_jwvkw")
+script = ExtResource("11_4ckjr")
 
-[node name="DoneButton" type="TextureButton" parent="CanvasLayer" unique_id=1495960439]
+[node name="DoneButton" type="TextureButton" parent="CanvasLayer" unique_id=349584070]
 offset_left = 754.0
 offset_top = 248.0
 offset_right = 933.0
 offset_bottom = 425.0
-texture_normal = ExtResource("13_hxcxk")
+texture_normal = ExtResource("12_e85qb")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("14_8lcvf")
+script = ExtResource("13_glepj")
 
-[node name="ClearButton" type="TextureButton" parent="CanvasLayer" unique_id=1196218419]
+[node name="ClearButton" type="TextureButton" parent="CanvasLayer" unique_id=1649500694]
 offset_left = 233.0
 offset_top = 240.0
 offset_right = 415.0
 offset_bottom = 421.0
-texture_normal = ExtResource("15_i4p3k")
+texture_normal = ExtResource("14_hxcxk")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("16_32143")
+script = ExtResource("15_8lcvf")
 
-[node name="NeccessaryEvil" type="Node" parent="." unique_id=1706429926]
+[node name="NeccessaryEvil" type="Node" parent="." unique_id=1193040880]
 
-[node name="BackWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=1696824668]
+[node name="BackWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=795458575]
 unique_name_in_owner = true
 position = Vector2(0, 1000)
 freeze = true
 
-[node name="BackSprite2D" type="Sprite2D" parent="NeccessaryEvil/BackWheel" unique_id=349814656]
+[node name="BackSprite2D" type="Sprite2D" parent="NeccessaryEvil/BackWheel" unique_id=727801066]
 unique_name_in_owner = true
 
-[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/BackWheel" unique_id=193716229]
+[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/BackWheel" unique_id=2068917724]
 unique_name_in_owner = true
 polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
 
-[node name="FrontWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=1776521951]
+[node name="FrontWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=1417235916]
 unique_name_in_owner = true
 position = Vector2(0, 1000)
 freeze = true
-script = ExtResource("17_6qdij")
+script = ExtResource("7_5yl8e")
 
-[node name="Sprite2D" type="Sprite2D" parent="NeccessaryEvil/FrontWheel" unique_id=1340301866]
+[node name="Sprite2D" type="Sprite2D" parent="NeccessaryEvil/FrontWheel" unique_id=367525643]
 unique_name_in_owner = true
 visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/FrontWheel" unique_id=1558486089]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/FrontWheel" unique_id=157758177]
 unique_name_in_owner = true
 visible = false
 polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
 
-[node name="CarRigidbody" type="RigidBody2D" parent="NeccessaryEvil" unique_id=816370465]
+[node name="CarRigidbody" type="RigidBody2D" parent="NeccessaryEvil" unique_id=1769104793]
 unique_name_in_owner = true
 position = Vector2(0, 1000)
 sleeping = true
 lock_rotation = true
 freeze = true
 
-[node name="BackWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=870406656]
+[node name="BackWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=201089854]
 unique_name_in_owner = true
 position = Vector2(-82, 25)
 scale = Vector2(0.1015625, 0.1015625)
 
-[node name="FrontWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=1190442924]
+[node name="FrontWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=895611419]
 unique_name_in_owner = true
 position = Vector2(0, 2)
 scale = Vector2(0.1015625, 0.1015625)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NeccessaryEvil/CarRigidbody" unique_id=1153675848]
-shape = SubResource("RectangleShape2D_5yl8e")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NeccessaryEvil/CarRigidbody" unique_id=1792707598]
+shape = SubResource("RectangleShape2D_vbt2j")
 
 [connection signal="mouse_entered" from="DrawCanvasLayer/DrawButton" to="DrawCanvasLayer/DrawButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DrawCanvasLayer/DrawButton" to="DrawCanvasLayer/DrawButton" method="_on_mouse_exited"]

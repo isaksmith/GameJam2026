@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://ds0tyqbcwp7k"]
 
 [ext_resource type="Script" uid="uid://b8xljuxuffuee" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
-[ext_resource type="Texture2D" uid="uid://doiek6y2nvm7u" path="res://assets/sprites/ui/title_screen.png" id="2_1g8jr"]
+[ext_resource type="Texture2D" uid="uid://16wg7abqbwa1" path="res://title_screen_no_start_button.png" id="2_1g8jr"]
+[ext_resource type="Texture2D" uid="uid://bgvavrxtea61n" path="res://title_screen.png" id="3_m1kxf"]
+[ext_resource type="Shader" uid="uid://p43rcuwax6j5" path="res://HoverShader.tres" id="3_x2yvf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1g8jr"]
+shader = ExtResource("3_x2yvf")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qv1gd"]
 
@@ -31,6 +36,16 @@ mouse_filter = 2
 texture = ExtResource("2_1g8jr")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=203445655]
+material = SubResource("ShaderMaterial_1g8jr")
+layout_mode = 0
+offset_left = 39.0
+offset_top = 78.0
+offset_right = 271.0
+offset_bottom = 300.0
+texture = ExtResource("3_m1kxf")
+expand_mode = 1
 
 [node name="StartButton" type="Button" parent="." unique_id=545895936]
 layout_mode = 0

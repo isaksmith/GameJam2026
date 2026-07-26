@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
 [ext_resource type="Texture2D" uid="uid://b2miahtoa4j8f" path="res://assets/sprites/characters/monkey_cheer.png" id="5_cp117"]
 [ext_resource type="Texture2D" uid="uid://p53ier8ay24h" path="res://assets/sprites/fx/spritsheet.png" id="7_4clw4"]
+[ext_resource type="Script" uid="uid://bn6ygfwiock1k" path="res://scenes/camera_2d.gd" id="7_ctevm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
 size = Vector2(180, 64)
@@ -132,7 +133,7 @@ node_b = NodePath("frontWheel")
 motor_enabled = true
 motor_target_velocity = 1.2217305
 
-[node name="frontWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Front" unique_id=1594768343]
+[node name="frontWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Front" unique_id=1594768343 groups=["wheels"]]
 collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_jtldb")
 script = ExtResource("2_jtldb")
@@ -148,7 +149,7 @@ node_b = NodePath("rearWheel")
 motor_enabled = true
 motor_target_velocity = 1.2217305
 
-[node name="rearWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Rear" unique_id=529902088]
+[node name="rearWheel" type="RigidBody2D" parent="chassis/PinJoint2D_Rear" unique_id=529902088 groups=["wheels"]]
 collision_layer = 2
 script = ExtResource("2_jtldb")
 
@@ -162,6 +163,12 @@ z_index = 2
 position = Vector2(9, -29)
 scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")
+
+[node name="SubViewport" type="SubViewport" parent="chassis" unique_id=1506046549]
+
+[node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049 groups=["main_camera"]]
+zoom = Vector2(0.71, 0.71)
+script = ExtResource("7_ctevm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=81058360]
 visible = false

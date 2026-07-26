@@ -27,6 +27,8 @@ window/stretch/aspect="expand"
 [global_group]
 
 cart=""
+main_camera=""
+wheels=""
 
 [physics]
 
