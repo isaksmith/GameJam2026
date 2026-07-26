@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://qbyp1p5ibe8r"]
+
+[ext_resource type="Texture2D" uid="uid://di8fpw7r2fose" path="res://assets/sprites/ui/draw_button.png" id="1_xcfcs"]
+[ext_resource type="Script" uid="uid://dked357jttas3" path="res://scenes/DrawButton.gd" id="2_o25hy"]
+[ext_resource type="Script" uid="uid://c3xy5xm5fjkyk" path="res://scenes/canvas_layer.gd" id="3_fgm1k"]
+[ext_resource type="Texture2D" uid="uid://bk278y5htfpx2" path="res://assets/sprites/ui/drawing_wheels_no_hands_UI.png" id="4_03l1i"]
+[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://scripts/color_rect.gd" id="5_tdbwj"]
+[ext_resource type="Texture2D" uid="uid://2bso4nh4mmid" path="res://assets/sprites/ui/monkey_hands.png" id="6_7baoj"]
+[ext_resource type="Script" uid="uid://cetxtub18qoyg" path="res://scenes/texture_rect_2.gd" id="7_ck0uu"]
+[ext_resource type="Texture2D" uid="uid://cs5gdsoxevog1" path="res://assets/sprites/ui/done_button.png" id="8_565tv"]
+[ext_resource type="Script" uid="uid://cxqf2j087gim" path="res://scenes/done.gd" id="9_7ccc2"]
+[ext_resource type="Texture2D" uid="uid://cji56q41g0oax" path="res://assets/sprites/ui/clear_button.png" id="10_u650w"]
+[ext_resource type="Script" uid="uid://cncao1ylsqjoi" path="res://scenes/clear.gd" id="11_yansv"]
+[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="12_dph1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yl8e"]
+size = Vector2(1, 1)
+
+[node name="Node" type="Node" unique_id=1672840084]
+
+[node name="DrawCanvasLayer" type="CanvasLayer" parent="." unique_id=236578615]
+
+[node name="DrawButton" type="TextureButton" parent="DrawCanvasLayer" unique_id=596190092]
+unique_name_in_owner = true
+offset_left = 980.0
+offset_right = 1141.0
+offset_bottom = 129.0
+disabled = true
+texture_normal = ExtResource("1_xcfcs")
+ignore_texture_size = true
+stretch_mode = 6
+script = ExtResource("2_o25hy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1256565146]
+unique_name_in_owner = true
+offset = Vector2(0, 700)
+transform = Transform2D(1, 0, 0, 1, 0, 700)
+script = ExtResource("3_fgm1k")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1381319491]
+offset_right = 1153.0
+offset_bottom = 588.9375
+texture = ExtResource("4_03l1i")
+expand_mode = 5
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=169368133]
+offset_right = 1157.0
+offset_bottom = 797.0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=1103807219]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(923, 797)
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=75774573]
+unique_name_in_owner = true
+offset_left = 420.0
+offset_top = 130.0
+offset_right = 735.0
+offset_bottom = 450.0
+script = ExtResource("5_tdbwj")
+
+[node name="MonkeyHand" type="TextureRect" parent="CanvasLayer" unique_id=1535922805]
+unique_name_in_owner = true
+process_mode = 4
+z_index = 2
+offset_left = 988.0
+offset_top = 614.0
+offset_right = 1757.0
+offset_bottom = 1529.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-22.055, -40.685)
+mouse_filter = 2
+texture = ExtResource("6_7baoj")
+script = ExtResource("7_ck0uu")
+
+[node name="DoneButton" type="TextureButton" parent="CanvasLayer" unique_id=1041476058]
+offset_left = 754.0
+offset_top = 248.0
+offset_right = 933.0
+offset_bottom = 425.0
+texture_normal = ExtResource("8_565tv")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("9_7ccc2")
+
+[node name="ClearButton" type="TextureButton" parent="CanvasLayer" unique_id=1242581709]
+offset_left = 233.0
+offset_top = 240.0
+offset_right = 415.0
+offset_bottom = 421.0
+texture_normal = ExtResource("10_u650w")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("11_yansv")
+
+[node name="NeccessaryEvil" type="Node" parent="." unique_id=1106321944]
+
+[node name="BackWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=71202018]
+unique_name_in_owner = true
+position = Vector2(0, 1000)
+freeze = true
+
+[node name="BackSprite2D" type="Sprite2D" parent="NeccessaryEvil/BackWheel" unique_id=1298434307]
+unique_name_in_owner = true
+
+[node name="BackCollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/BackWheel" unique_id=1882995335]
+unique_name_in_owner = true
+polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="FrontWheel" type="RigidBody2D" parent="NeccessaryEvil" unique_id=421207]
+unique_name_in_owner = true
+position = Vector2(0, 1000)
+freeze = true
+script = ExtResource("12_dph1i")
+
+[node name="Sprite2D" type="Sprite2D" parent="NeccessaryEvil/FrontWheel" unique_id=890820426]
+unique_name_in_owner = true
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NeccessaryEvil/FrontWheel" unique_id=732087639]
+unique_name_in_owner = true
+visible = false
+polygon = PackedVector2Array(20.445007, 64, 44.99121, 71.81018, 64.44501, 78, 73.44501, 65, 67.44501, 39)
+
+[node name="CarRigidbody" type="RigidBody2D" parent="NeccessaryEvil" unique_id=1592574156]
+unique_name_in_owner = true
+position = Vector2(0, 1000)
+sleeping = true
+lock_rotation = true
+freeze = true
+
+[node name="BackWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=1596590449]
+unique_name_in_owner = true
+position = Vector2(-82, 25)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="FrontWheelAxis" type="Node2D" parent="NeccessaryEvil/CarRigidbody" unique_id=310081014]
+unique_name_in_owner = true
+position = Vector2(0, 2)
+scale = Vector2(0.1015625, 0.1015625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NeccessaryEvil/CarRigidbody" unique_id=1921925270]
+shape = SubResource("RectangleShape2D_5yl8e")
+
+[connection signal="mouse_entered" from="DrawCanvasLayer/DrawButton" to="DrawCanvasLayer/DrawButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DrawCanvasLayer/DrawButton" to="DrawCanvasLayer/DrawButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="DrawCanvasLayer/DrawButton" to="DrawCanvasLayer/DrawButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" to="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" to="CanvasLayer/SubViewportContainer/SubViewport/ColorRect" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/DoneButton" to="CanvasLayer/DoneButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/ClearButton" to="CanvasLayer/ClearButton" method="_on_pressed"]

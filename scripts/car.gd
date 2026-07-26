@@ -5,6 +5,7 @@ extends Node2D
 @onready var rear_wheel_sprite = $chassis/PinJoint2D_Rear/rearWheel/Sprite2D
 
 
+
 func apply_custom_texture(texture):
 	front_wheel_sprite.texture = texture
 	rear_wheel_sprite.texture = texture
@@ -16,6 +17,14 @@ func apply_custom_wheels(drawn_points: PackedVector2Array) -> void:
 		
 	if is_instance_valid(rear_wheel):
 		rear_wheel.setup_drawn_wheel(drawn_points)
+
+
+func add_wheels_to_group():
+	if rear_wheel != null && front_wheel != null:
+		rear_wheel.add_to_group("wheels")
+		front_wheel.add_to_group("wheels")
+
+	
 
 func _process(delta: float) -> void:
 	#front_wheel_sprite.global_position = $chassis/PinJoint2D_Front/frontWheel/CollisionPolygon2D.global_position

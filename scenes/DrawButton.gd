@@ -27,4 +27,5 @@ func fade_to_color(target_color: Color) -> void:
 
 func _on_pressed() -> void:
 	canvas_layer.trigger_camera_action()
+	disabled = true
 	pass # Replace with function body.
