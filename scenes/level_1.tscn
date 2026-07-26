@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bdkat6q1v87n" path="res://assets/sprites/terrain/grass.png" id="3_fcfvj"]
 [ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="6_fcfvj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv1gd"]
+size = Vector2(20, 1180.25)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_fcfvj"]
 radius = 65.0
 
@@ -47,6 +50,14 @@ points = PackedVector2Array(-3, 232, 235, 281, 423, 385, 738, 481, 1090, 434, 17
 width = 35.0
 texture = ExtResource("3_fcfvj")
 texture_mode = 1
+
+[node name="LeftWall" type="CollisionShape2D" parent="Terrain" unique_id=753332598]
+position = Vector2(-10, 142.125)
+shape = SubResource("RectangleShape2D_qv1gd")
+
+[node name="RightWall" type="CollisionShape2D" parent="Terrain" unique_id=1734766475]
+position = Vector2(2467, 118.75)
+shape = SubResource("RectangleShape2D_qv1gd")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1055188318]
 position = Vector2(145, 146)

@@ -44,15 +44,7 @@ scale = Vector2(0.48737502, 0.25146607)
 texture = ExtResource("2_eqxsl")
 polygon = PackedVector2Array(0, -660.1289, 324.18567, -592.5253, 818.67145, -345.9712, 1485.509, -31.813477, 2347.2686, 318.1344, 5051.552, 345.97107, 5061.8105, 1000, 0, 1012)
 
-[node name="GrassTop" type="Line2D" parent="Terrain" unique_id=1320206405]
-visible = false
-position = Vector2(0, 10)
-points = PackedVector2Array(0, 232, 18, 232, 158, 246, 1144, 476, 2462, 479)
-width = 35.0
-texture = ExtResource("3_wo48x")
-texture_mode = 1
-
-[node name="GrassTop2" type="Line2D" parent="Terrain" unique_id=264764978]
+[node name="GrassTop" type="Line2D" parent="Terrain" unique_id=264764978]
 texture_repeat = 2
 position = Vector2(0, 10)
 points = PackedVector2Array(-3, 232, 154, 251, 750, 397, 1145, 479, 1704, 482, 2462, 486)
