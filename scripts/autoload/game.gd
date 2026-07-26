@@ -23,6 +23,7 @@ var current_index: int = 0
 const MAIN_MENU: String = "res://scenes/ui/main_menu.tscn"
 const LEVEL_HOST: String = "res://scenes/ui/level_host.tscn"
 
+const DRAW_HUD: String = "res://scenes/ui/draw_hud.tscn"
 # A link to the live LevelHos.t scene (the gameplay container).
 # LevelHost fills this in on itself when it loads (see level_host.gd).
 var host: Node = null
@@ -48,9 +49,10 @@ func quit_game() -> void:
 ## Loads the level at LEVELS[index] into the host, spawns the cart, wires the goal.
 func load_level(index: int) -> void:
 	current_index = index
-
+	
 	# The empty Node2D inside LevelHost where the active level lives.
 	var slot: Node = host.get_node("CurrentLevel")
+	var canvas_layer: CanvasLayer = host.get_node("CanvasLayer")
 
 	# Clear out the old level (and the cart inside it, since the cart is its child).
 	# queue_free() removes a node safely at the end of the frame.
@@ -65,6 +67,7 @@ func load_level(index: int) -> void:
 	# Put the cart in the level and hook up the win trigger.
 	_spawn_cart(level)
 	_wire_goal(level)
+	canvas_layer.delayed_trigger_camera_action()
 	_wire_kill_zone(level)
 
 
@@ -90,11 +93,21 @@ func next_level() -> void:
 func _spawn_cart(level: Node) -> void:
 	var spawn: Marker2D = level.get_node("PlayerSpawn")
 	var cart: Node2D = (load(CART_SCENE) as PackedScene).instantiate()
+	cart.add_to_group("cart")
+	cart.add_wheels_to_group()
+	#var frontwheel = cart.get_node(chassis/PinJoin2D_Front/frontWheel/CollisionPolygon2)
 	# Add the cart as a CHILD OF THE LEVEL, so reloading the level removes the cart too.
 	level.add_child(cart)
 	cart.global_position = spawn.global_position
 
-
+#func _spawn_drawHUD(level:Node) -> void:
+	#var HUD: Node = (load(DRAW_HUD) as PackedScene).instantiate()
+	#var parent_node = HUD.get_node("DrawHUD")
+	#HUD.print_tree_pretty()
+	#for child in parent_node.get_children():
+		#parent_node.remove_child(child)
+		#add_child(child)
+	
 ## Connects the level's Goal so we get told when a body enters it.
 func _wire_goal(level: Node) -> void:
 	var goal: Area2D = level.get_node("Goal")
