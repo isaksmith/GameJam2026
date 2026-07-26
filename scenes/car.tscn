@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dqiyoy2tmw5y4" path="res://scripts/car.gd" id="1_3mrxu"]
 [ext_resource type="Script" uid="uid://dkgp1u7agi6ni" path="res://scripts/chassis.gd" id="1_uoj53"]
 [ext_resource type="Script" uid="uid://crvva7t78eggw" path="res://scripts/wheel.gd" id="2_jtldb"]
-[ext_resource type="Texture2D" uid="uid://3bigj1vedref" path="res://assets/sprites/Screenshot 2026-07-24 210101.png" id="2_k61xc"]
 [ext_resource type="Texture2D" uid="uid://53gbxfh2x7py" path="res://assets/sprites/characters/monkey_idle.png" id="5_3mrxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gueqe"]
@@ -33,11 +32,9 @@ collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_jtldb")
 script = ExtResource("2_jtldb")
 
-[node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1851375978]
-scale = Vector2(0.049, 0.049)
-texture = ExtResource("2_k61xc")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1775956086]
+
+[node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Front/frontWheel" unique_id=1851375978]
 
 [node name="PinJoint2D_Rear" type="PinJoint2D" parent="chassis" unique_id=716700229]
 position = Vector2(-42, 32)
@@ -52,8 +49,6 @@ script = ExtResource("2_jtldb")
 
 [node name="Sprite2D" type="Sprite2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=192300974]
 position = Vector2(1.9073486e-06, 0)
-scale = Vector2(0.04872879, 0.048728798)
-texture = ExtResource("2_k61xc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="chassis/PinJoint2D_Rear/rearWheel" unique_id=1062075541]
 
@@ -64,3 +59,4 @@ scale = Vector2(0.28729165, 0.28729165)
 texture = ExtResource("5_3mrxu")
 
 [node name="Camera2D" type="Camera2D" parent="chassis" unique_id=762855049]
+zoom = Vector2(0.7, 0.7)

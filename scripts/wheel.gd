@@ -19,9 +19,9 @@ func generate_test_circle(vertex_count: int, radius: float) -> PackedVector2Arra
 
 func setup_drawn_wheel(drawn_points: PackedVector2Array) -> void:
 	#$CollisionPolygon2D.polygon = drawn_points
-	if drawn_points.size() < 3:
-		push_warning("Wheel shape requires at least 3 points!")
-		return
+	#if drawn_points.size() < 3:
+		#push_warning("Wheel shape requires at least 3 points!")
+		#return
 	# Finds the exact middle of whatever shape the player drew, averages all points
 	var center = Vector2.ZERO
 	for point in drawn_points:
@@ -35,6 +35,9 @@ func setup_drawn_wheel(drawn_points: PackedVector2Array) -> void:
 		
 	# Update the physical wheel shape
 	$CollisionPolygon2D.polygon = centered_points
+	if has_node("Sprite2D"):
+		$Sprite2D.centered = false
+		$Sprite2D.position = -center
 	
 	
 func calculateBonusTorque() -> float:

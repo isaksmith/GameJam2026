@@ -75,12 +75,29 @@ func save_drawing(filename: String = "user://my_shape.png") -> void:
 		print("Error saving image!")
 		
 	if target_sprite:
+		var car = get_tree().get_first_node_in_group("cart")
+		print(texture)
+		car.apply_custom_texture(texture)
 		target_sprite.texture = texture
 		target_sprite2.texture = texture
 
 		target_node.create_collider_from_drawn_shape()
 		print("Sprite2D texture updated successfully!")
+		
+	var all_drawn_points := PackedVector2Array()
 
+	for child in viewport.get_children():
+		if child is Line2D:
+			#all_drawn_points.append_array(child.points)
+			for pt in child.points:
+			# Shift drawn points relative to the top-left of the ColorRect
+				all_drawn_points.append(pt - color_rect.position)
+
+	#if all_drawn_points.size() > 2:
+		var car = get_tree().get_first_node_in_group("cart")
+		if car:
+			if car.has_method("apply_custom_wheels"):
+				car.apply_custom_wheels(all_drawn_points)
 	clear_lines()
 
 

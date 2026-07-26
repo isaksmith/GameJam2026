@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bjw2ji2e6vacg"]
 
-[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://color_rect.gd" id="1_25juh"]
-[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="2_0bw7c"]
+[ext_resource type="PackedScene" uid="uid://dthqiulpf51lb" path="res://scenes/car.tscn" id="1_tee38"]
+[ext_resource type="Script" uid="uid://6w1anapqcko" path="res://rigid_body_2d.gd" id="2_tee38"]
+[ext_resource type="Script" uid="uid://g1yd6sw0d8cr" path="res://scripts/color_rect.gd" id="2_w6j36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bw7c"]
 size = Vector2(798, 177)
@@ -10,6 +11,9 @@ size = Vector2(798, 177)
 size = Vector2(196.5, 71)
 
 [node name="Node2D" type="Node2D" unique_id=1772796915]
+
+[node name="Car" parent="." unique_id=1932826611 groups=["cart"] instance=ExtResource("1_tee38")]
+position = Vector2(182, 398)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=343081861]
 offset_right = 206.0
@@ -26,13 +30,13 @@ offset_left = 13.0
 offset_top = 11.0
 offset_right = 194.0
 offset_bottom = 192.0
-script = ExtResource("1_25juh")
+script = ExtResource("2_w6j36")
 
 [node name="FrontWheel" type="RigidBody2D" parent="." unique_id=1823785593]
 unique_name_in_owner = true
 position = Vector2(260, 119)
 freeze = true
-script = ExtResource("2_0bw7c")
+script = ExtResource("2_tee38")
 
 [node name="Sprite2D" type="Sprite2D" parent="FrontWheel" unique_id=81602725]
 unique_name_in_owner = true
