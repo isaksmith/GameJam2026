@@ -2,6 +2,8 @@
 
 ![BABOOM title art](baboom-image-1.png)
 
+[Play BABOOM! - original game jam submission](https://itch.io/jam/ict-game-jam-summer-2026/rate/4830541)
+
 **BABOOM** is a 2D physics game built for the 2026 Game Jam around the theme
 **“Reinvent the Wheel.”**
 
@@ -17,7 +19,7 @@ cart, and discover which designs can overcome each level's terrain.
 - Reach the banana to advance through the game's four levels and finale.
 
 Large wheels can clear tall obstacles, smooth wheels roll quickly, and irregular
-or spiky wheels can provide useful grip. There is no single best design—each
+or spiky wheels can provide useful grip. There is no single best design; each
 level asks you to reinvent the wheel.
 
 ## Screenshots
@@ -76,16 +78,16 @@ physics.
 
 Created by Team Monke for the 2026 Game Jam:
 
-- Wesley, Keaton, and Joanna — development
-- Tammy — art
+- Wesley, Keaton, and Joanna: development
+- Tammy: art
 
 Isak created a minigame version:
 [Banana Genesis Game Jam 2026](https://github.com/isaksmith/BananaGenesisGameJam2026).
 
 ## Play online
 
-- [BABOOM! — original game jam submission](https://itch.io/jam/ict-game-jam-summer-2026/rate/4830541)
-- [BaBoom: Banana Genesis — expanded minigame](https://isaksmith.itch.io/baboom-banana-genesis)
+- [BABOOM! - original game jam submission](https://itch.io/jam/ict-game-jam-summer-2026/rate/4830541)
+- [BaBoom: Banana Genesis - expanded minigame](https://isaksmith.itch.io/baboom-banana-genesis)
 
 See [`design.md`](design.md) for the original pitch and
 [`team_workflow.md`](team_workflow.md) for contribution conventions.
