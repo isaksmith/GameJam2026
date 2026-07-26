@@ -12,6 +12,7 @@ const LEVELS: Array[String] = [
 	"res://scenes/level_2.tscn",
 	"res://scenes/mushroom_level.tscn",
 	"res://scenes/level_4.tscn",
+	"res://scenes/end_scene.tscn"
 ]
 
 # Which cart to spawn into each level. A placeholder ball for now;
