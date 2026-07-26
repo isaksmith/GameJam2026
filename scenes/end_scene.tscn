@@ -9,6 +9,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ojf8p"]
 radius = 108.11568
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f6mif"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ctevm"]
 atlas = ExtResource("5_ojf8p")
 region = Rect2(0, 0, 128, 128)
@@ -156,6 +158,7 @@ offset_right = 346.66663
 offset_bottom = 158.66667
 theme_override_fonts/font = ExtResource("4_fjxr3")
 theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f6mif")
 text = "BABOOOOM YOU WIN!"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1134005949]
