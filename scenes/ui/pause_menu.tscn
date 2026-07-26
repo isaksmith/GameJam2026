@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmk20t1y61x0c"]
 
 [ext_resource type="Script" uid="uid://ce0nba7ulg2e" path="res://scripts/ui/pause_menu.gd" id="1_6tw0m"]
+[ext_resource type="FontFile" uid="uid://bneyjfvrdvkx4" path="res://assets/fonts/SHOWG.TTF" id="2_0lmf7"]
 
 [node name="PauseMenu" type="Control" unique_id=1097502891]
 process_mode = 3
@@ -37,16 +38,24 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="Box" unique_id=809667010]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0lmf7")
 text = "Paused"
+horizontal_alignment = 1
 
 [node name="ResumeButton" type="Button" parent="Box" unique_id=1666660496]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0lmf7")
+theme_override_font_sizes/font_size = 12
 text = "Resume"
 
 [node name="RestartButton" type="Button" parent="Box" unique_id=72729537]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0lmf7")
+theme_override_font_sizes/font_size = 12
 text = "Restart"
 
 [node name="MenuButton" type="Button" parent="Box" unique_id=1709678182]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0lmf7")
+theme_override_font_sizes/font_size = 12
 text = "Menu"
