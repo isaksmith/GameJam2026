@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="5_lv3lf"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_ytui5"]
 [ext_resource type="Texture2D" uid="uid://dmme038tq23m7" path="res://assets/sprites/terrain/forest/platform/forest_background.png" id="6_lv3lf"]
+[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="7_4hhyd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
 bounce = 1.0
@@ -48,11 +49,14 @@ physics_material_override = SubResource("PhysicsMaterial_jfkbx")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead" unique_id=891759045]
 z_index = 1
+position = Vector2(-24.020813, 66.21175)
+rotation = -0.5166175
 polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
 
 [node name="Sprite2D" type="Sprite2D" parent="mushroomHead" unique_id=1722695440]
 texture_filter = 1
-position = Vector2(137.99997, 63.999977)
+position = Vector2(126.361496, 50.035816)
+rotation = -0.5166175
 scale = Vector2(11.445312, 11.445312)
 texture = ExtResource("3_uci07")
 
@@ -241,9 +245,9 @@ texture = ExtResource("6_lv3lf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=355292465]
 z_index = -6
-position = Vector2(1873.4998, 272.125)
-scale = Vector2(13.7890625, 9.195602)
-texture = ExtResource("6_lv3lf")
+position = Vector2(408.99997, 245.99998)
+scale = Vector2(1.2177734, 1.2177736)
+texture = ExtResource("7_4hhyd")
 
 [node name="KillZone" type="Area2D" parent="." unique_id=1657661776]
 
@@ -264,3 +268,15 @@ position = Vector2(-772, 328)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftBorder" unique_id=2133017347]
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_jfkbx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1202849046]
+z_index = -6
+position = Vector2(2746, 246)
+scale = Vector2(1.218, 1.218)
+texture = ExtResource("7_4hhyd")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1005344737]
+z_index = -6
+position = Vector2(5081, 246.00002)
+scale = Vector2(1.218, 1.218)
+texture = ExtResource("7_4hhyd")
