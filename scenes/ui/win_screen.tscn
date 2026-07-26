@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5294118)
+color = Color(0, 0, 0, 0.38431373)
 
 [node name="Box" type="VBoxContainer" parent="." unique_id=495366067]
 layout_mode = 1
@@ -38,7 +38,7 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="Box" unique_id=1988649562]
 layout_mode = 2
-text = "Banana Reached!
+text = "Princess Baboon Reached!
 "
 horizontal_alignment = 1
 
