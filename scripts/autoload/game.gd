@@ -8,11 +8,11 @@ extends Node
 # The ordered list of levels. For now it points at your Level 2 so we can test.
 # This is the ONE place levels are listed — add new level paths here as they're made.
 const LEVELS: Array[String] = [
-	"res://scenes/end_scene.tscn",
 	"res://scenes/level_1.tscn",
 	"res://scenes/level_2.tscn",
 	"res://scenes/mushroom_level.tscn",
-	"res://scenes/level_4.tscn"
+	"res://scenes/level_4.tscn",
+	"res://scenes/end_scene.tscn",
 ]
 
 # Which cart to spawn into each level. A placeholder ball for now;
