@@ -5,12 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
 [ext_resource type="Script" uid="uid://dklg05cpl5swv" path="res://scripts/camera_2d.gd" id="5_lv3lf"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="5_ytui5"]
+[ext_resource type="Texture2D" uid="uid://dmme038tq23m7" path="res://assets/sprites/terrain/forest/platform/forest_background.png" id="6_lv3lf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jfkbx"]
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfkbx"]
-size = Vector2(387.00003, 520)
+size = Vector2(387.00003, 948.50024)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfkbx"]
 radius = 108.11568
@@ -21,7 +22,7 @@ radius = 108.11568
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff" unique_id=184530132]
 position = Vector2(-3, 0)
-polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 402, 763, -106, 768, -123, 135, -134, 4)
+polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 399, 1374, -127, 1378, -123, 135, -134, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="cliff" unique_id=1198424344]
 position = Vector2(134, 65.00001)
@@ -30,8 +31,8 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="cliff" unique_id=679355939]
 z_index = -1
-position = Vector2(134, 359)
-scale = Vector2(0.88000005, 0.905)
+position = Vector2(134, 719.25)
+scale = Vector2(0.88000005, 2.1058333)
 texture = ExtResource("2_ytui5")
 
 [node name="mushroomHead" type="StaticBody2D" parent="." unique_id=1757760001]
@@ -58,13 +59,13 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D3" type="Sprite2D" parent="mushroomHead" unique_id=1488743233]
 z_index = -1
-position = Vector2(321.46057, 416.51413)
+position = Vector2(420.09448, 578.1024)
 rotation = -0.54803336
-scale = Vector2(0.6354167, 0.7599998)
+scale = Vector2(0.6354167, 1.3910433)
 texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead" unique_id=1371637185]
-position = Vector2(304.3739, 388.28174)
+position = Vector2(406.23132, 555.15094)
 rotation = -0.54803336
 shape = SubResource("RectangleShape2D_jfkbx")
 
@@ -92,14 +93,14 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D3" type="Sprite2D" parent="mushroomHead2" unique_id=594908073]
 z_index = -1
-position = Vector2(323.95313, 419.92838)
+position = Vector2(379.49457, 510.91986)
 rotation = -0.54803336
-scale = Vector2(0.6354167, 0.7599998)
+scale = Vector2(0.6354167, 1.1153448)
 texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead2" unique_id=2110388235]
 z_index = -1
-position = Vector2(306.4579, 391.69598)
+position = Vector2(316.2268, 407.69995)
 rotation = -0.54803336
 shape = SubResource("RectangleShape2D_jfkbx")
 
@@ -125,8 +126,8 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D3" type="Sprite2D" parent="mushroomHead3" unique_id=1681413685]
 z_index = -1
-position = Vector2(154.00012, 457.99997)
-scale = Vector2(0.6354167, 0.7599998)
+position = Vector2(154.00012, 517)
+scale = Vector2(0.6354167, 0.9566666)
 texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead3" unique_id=1307809415]
@@ -157,8 +158,8 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D3" type="Sprite2D" parent="mushroomHead4" unique_id=1037719211]
 z_index = -2
-position = Vector2(187.00012, 467.99997)
-scale = Vector2(0.6354167, 0.7599998)
+position = Vector2(187.00012, 523)
+scale = Vector2(0.6354167, 0.9433332)
 texture = ExtResource("2_ytui5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mushroomHead4" unique_id=711064056]
@@ -171,7 +172,7 @@ position = Vector2(1298, 108)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff2" unique_id=339621094]
 position = Vector2(-3, 0)
-polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 402, 763, -106, 768, -123, 135, -134, 4)
+polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 388, 1366, -134, 1351, -123, 135, -134, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="cliff2" unique_id=1362372212]
 position = Vector2(134, 65.00001)
@@ -180,8 +181,8 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="cliff2" unique_id=551274419]
 z_index = -1
-position = Vector2(134, 359)
-scale = Vector2(0.88000005, 0.905)
+position = Vector2(134, 710.25)
+scale = Vector2(0.88000005, 2.075833)
 texture = ExtResource("2_ytui5")
 
 [node name="cliff3" type="StaticBody2D" parent="." unique_id=431978783]
@@ -189,7 +190,7 @@ position = Vector2(3486, 411)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cliff3" unique_id=1989869886]
 position = Vector2(-3, 0)
-polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 402, 763, -106, 768, -123, 135, -134, 4)
+polygon = PackedVector2Array(16, -1, 395, -3, 398, 78, 402, 219, 390, 1140, -125, 1125, -123, 135, -134, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="cliff3" unique_id=1084932407]
 position = Vector2(134, 65.00001)
@@ -198,8 +199,8 @@ texture = ExtResource("1_e3ttu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="cliff3" unique_id=1375786971]
 z_index = -1
-position = Vector2(134, 359)
-scale = Vector2(0.88000005, 0.905)
+position = Vector2(134, 599.75)
+scale = Vector2(0.88000005, 1.7075)
 texture = ExtResource("2_ytui5")
 
 [node name="Goal" type="Area2D" parent="." unique_id=204430021]
@@ -221,6 +222,19 @@ position = Vector2(135, -218)
 zoom = Vector2(0.5, 0.5)
 limit_left = -257
 limit_top = -696
-limit_right = 4121
+limit_right = 3939
 limit_bottom = 1131
 script = ExtResource("5_lv3lf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1833959883]
+visible = false
+z_index = -2
+position = Vector2(5156.9995, 239.99998)
+scale = Vector2(9.4, 9.4)
+texture = ExtResource("6_lv3lf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355292465]
+z_index = -6
+position = Vector2(1845.5554, 272.125)
+scale = Vector2(10.945022, 9.195602)
+texture = ExtResource("6_lv3lf")
