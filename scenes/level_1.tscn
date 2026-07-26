@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d01tp7srdm82j"]
 
-[ext_resource type="Texture2D" uid="uid://b4xt6mc0rt7jy" path="res://assets/sprites/terrain/forest_bg.png" id="1_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://beo75limfx8a1" path="res://assets/sprites/terrain/forest_bg.png" id="1_fcfvj"]
 [ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://ba1ndkxr5qwag" path="res://assets/sprites/characters/princess_baboon.png" id="3_4nkto"]
 [ext_resource type="Texture2D" uid="uid://c28yd71r2upxq" path="res://assets/sprites/terrain/forest/props/plants.png" id="3_5xbjy"]
@@ -11,7 +11,7 @@
 size = Vector2(20, 1180.25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fcfvj"]
-radius = 65.0
+radius = 99.0202
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
 distance = 12.0
@@ -23,7 +23,7 @@ distance = -2.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=860916471]
 texture_repeat = 2
-position = Vector2(5, -205.00002)
+position = Vector2(-10, -571)
 scale = Vector2(0.52135414, 0.6098632)
 texture = ExtResource("1_fcfvj")
 centered = false
@@ -83,8 +83,9 @@ scale = Vector2(0.33666667, 0.33666667)
 texture = ExtResource("3_4nkto")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=986230265]
+zoom = Vector2(0.8, 0.8)
 limit_left = 0
-limit_top = 3
+limit_top = -500
 limit_right = 2457
 limit_bottom = 638
 script = ExtResource("6_fcfvj")
@@ -113,7 +114,7 @@ shape = SubResource("WorldBoundaryShape2D_pa8r4")
 [node name="Background2" type="Sprite2D" parent="." unique_id=227333462]
 z_index = -6
 texture_repeat = 2
-position = Vector2(1005, -205)
+position = Vector2(990, -571)
 scale = Vector2(0.52135414, 0.6098632)
 texture = ExtResource("1_fcfvj")
 centered = false
@@ -122,7 +123,7 @@ region_rect = Rect2(0, 0, 1230, 215.778)
 [node name="Background3" type="Sprite2D" parent="." unique_id=539908451]
 z_index = -5
 texture_repeat = 2
-position = Vector2(2002, -205)
+position = Vector2(1987, -571)
 scale = Vector2(0.52135414, 0.6098632)
 texture = ExtResource("1_fcfvj")
 centered = false
