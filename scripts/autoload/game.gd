@@ -10,6 +10,7 @@ extends Node
 const LEVELS: Array[String] = [
 	"res://scenes/_dev/placeholder_level.tscn",
 	"res://scenes/level_2.tscn",
+	"res://scenes/mushroom_level.tscn",
 ]
 
 # Which cart to spawn into each level. A placeholder ball for now;

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://36gwleaafdw8"]
 
-[ext_resource type="PackedScene" uid="uid://dthqiulpf51lb" path="res://scenes/car.tscn" id="1_836ff"]
 [ext_resource type="Texture2D" uid="uid://8eylwqs54253" path="res://assets/sprites/terrain/grass_floor.png" id="1_e3ttu"]
 [ext_resource type="Texture2D" uid="uid://du8y3hkp5oabj" path="res://assets/sprites/terrain/dirt_floor.png" id="2_ytui5"]
 [ext_resource type="Texture2D" uid="uid://beq40n5h4p5de" path="res://assets/_placeholder/Light Red Mushroom-1.png.png" id="3_uci07"]
@@ -33,9 +32,6 @@ z_index = -1
 position = Vector2(134, 359)
 scale = Vector2(0.88000005, 0.905)
 texture = ExtResource("2_ytui5")
-
-[node name="Car" parent="." unique_id=1932826611 instance=ExtResource("1_836ff")]
-position = Vector2(1377, -62)
 
 [node name="mushroomHead" type="StaticBody2D" parent="." unique_id=1757760001]
 position = Vector2(700.99994, 247.99998)
@@ -143,11 +139,12 @@ physics_material_override = SubResource("PhysicsMaterial_jfkbx")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mushroomHead4" unique_id=2017863661]
 z_index = 1
+position = Vector2(39.69995, -7.875)
 polygon = PackedVector2Array(16, 85, 15, 41, 23, 19, 34, -7, 48, -30, 61, -45, 77, -52, 88, -55, 102, -60, 118, -61, 129, -62, 140, -62, 158, -62, 174, -61, 191, -57, 208, -50, 217, -45, 227, -40, 234, -36, 244.34122, -26.74733, 253, -5, 261, 12, 268, 32, 273, 48, 274, 76)
 
 [node name="Sprite2D" type="Sprite2D" parent="mushroomHead4" unique_id=169834062]
 texture_filter = 1
-position = Vector2(137.99997, 63.999977)
+position = Vector2(177.69992, 56.124977)
 scale = Vector2(11.445312, 11.445312)
 texture = ExtResource("3_uci07")
 
@@ -215,3 +212,6 @@ shape = SubResource("CircleShape2D_jfkbx")
 position = Vector2(-42, 86)
 scale = Vector2(0.46, 0.46)
 texture = ExtResource("5_ytui5")
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=301199655]
+position = Vector2(135, -218)
