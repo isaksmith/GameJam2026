@@ -68,11 +68,16 @@ physics.
 
 Created by Team Monke for the 2026 Game Jam:
 
-- Joanna — wheel-drawing system and cart
-- Isak — Level 1
-- Keaton — Level 2
-- Tammy — Level 3
-- Wesley — final level, audio, effects, and intro
+- Wesley, Keaton, and Joanna — development
+- Tammy — art
+
+Isak created a separate expanded minigame version:
+[Banana Genesis Game Jam 2026](https://github.com/isaksmith/BananaGenesisGameJam2026).
+
+## Play online
+
+- [BABOOM! — original game jam submission](https://itch.io/jam/ict-game-jam-summer-2026/rate/4830541)
+- [BaBoom: Banana Genesis — expanded minigame](https://isaksmith.itch.io/baboom-banana-genesis)
 
 See [`design.md`](design.md) for the original pitch and
 [`team_workflow.md`](team_workflow.md) for contribution conventions.
