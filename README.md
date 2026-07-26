@@ -76,7 +76,7 @@ physics.
 
 Created by Team Monke for the 2026 Game Jam:
 
-- Wesley, Keaton, and Joanna: development
+- Keaton, Wesley, and Joanna: development
 - Tammy: art
 
 Isak created a minigame version:
